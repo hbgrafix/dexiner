@@ -148,6 +148,28 @@ colorElems.forEach(colorElem => {
 });
 
 
+// Function to update the hex codes in the .hex divs
+function updateHexCodes() {
+  // Select all .hex divs
+  const hexDivs = document.querySelectorAll('.hex');
+
+  // Loop through the .hex divs and update their content
+  hexDivs.forEach(hexDiv => {
+    // Get the color name from the class of the parent .clr div
+    const colorName = hexDiv.parentElement.id;
+
+    // Find the corresponding color code in the active scheme
+    const colorCode = activeScheme[colorName];
+
+    // Update the inner content of the .hex div with the color code
+    hexDiv.textContent = colorCode;
+  });
+}
+
+// Call the updateHexCodes function initially to set the hex codes for the default scheme
+updateHexCodes();
+
+
 // Add click event listener to each scheme
 schemes.querySelectorAll('li').forEach((scheme, index) => {
   scheme.addEventListener('click', () => {
@@ -176,6 +198,9 @@ schemes.querySelectorAll('li').forEach((scheme, index) => {
 
     // Update the selected scheme name
     selectedScheme.textContent = activeScheme.name;
+
+    // Update the hex color codes
+    updateHexCodes();
   });
 });
 
@@ -192,3 +217,72 @@ function togglePanel() {
 
 
 
+
+
+
+
+// Select all .display elements
+const displayElems = document.querySelectorAll('.display');
+
+// Color picker element
+const colorPicker = document.getElementById('colorPicker');
+
+// Function to set the color of a .display element
+function setColor(displayElem, color) {
+  displayElem.style.backgroundColor = color;
+  const colorName = displayElem.parentElement.id;
+  activeScheme[colorName] = color;
+
+  // Update the corresponding color code in the .hex div
+  const hexDiv = displayElem.nextElementSibling;
+  hexDiv.textContent = color;
+}
+
+// Event listener for hover to show color picker cursor
+displayElems.forEach(displayElem => {
+  displayElem.addEventListener('mouseenter', () => {
+    displayElem.style.cursor = 'pointer';
+  });
+
+  displayElem.addEventListener('mouseleave', () => {
+    displayElem.style.cursor = 'auto';
+  });
+});
+
+// Function to position the color picker and set its initial value
+function openColorPicker(displayElem, mouseX, mouseY) {
+  // Set initial value of color picker to the clicked element's color
+  const initialColor = displayElem.style.backgroundColor;
+  colorPicker.value = initialColor;
+
+  // Calculate the position for the color picker
+  const pickerWidth = colorPicker.offsetWidth;
+  const pickerHeight = colorPicker.offsetHeight;
+  const x = mouseX - pickerWidth / 2;
+  const y = mouseY - pickerHeight / 2;
+
+  // Position the color picker
+  colorPicker.style.left = `${x}px`;
+  colorPicker.style.top = `${y}px`;
+
+  // Show the color picker tool
+  colorPicker.click();
+
+  // Event listener for color picker change
+  colorPicker.addEventListener('input', () => {
+    const color = colorPicker.value;
+    setColor(displayElem, color);
+  });
+}
+
+// Event listener for click to open color picker tool
+displayElems.forEach(displayElem => {
+  displayElem.addEventListener('click', (event) => {
+    // Get the mouse position when the element was clicked
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    // Open the color picker with initial value and position
+    openColorPicker(displayElem, mouseX, mouseY);
+  });
+});
