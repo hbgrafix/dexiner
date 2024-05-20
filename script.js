@@ -27,11 +27,11 @@ const schemes = document.querySelector('.schemes');
 const schemesData = [
   {
     name: 'Scheme1',
-    primary: '#707070',
-    secondary: '#999999',
-    accent: '#FFC107',
-    light: '#F2F2F2',
-    dark: '#333333'
+    primary: '#1E2022',
+    secondary: '#292B2F',
+    accent: '#1E88E5',
+    light: '#F9F9F9',
+    dark: '#000000'
   },
   {
     name: 'Scheme2',
@@ -51,16 +51,16 @@ const schemesData = [
   },
   {
     name: 'Scheme4',
-    primary: '#1E2022',
-    secondary: '#292B2F',
-    accent: '#1E88E5',
-    light: '#F9F9F9',
-    dark: '#000000'
+    primary: '#707070',
+    secondary: '#999999',
+    accent: '#FFC107',
+    light: '#F2F2F2',
+    dark: '#333333'
   },
   {
     name: 'Scheme5',
-    primary: '#F1C40F',
-    secondary: '#E67E22',
+    primary: '#E67E22',
+    secondary: '#F1C40F',
     accent: '#8E44AD',
     light: '#FFFFFF',
     dark: '#2C3E50'
@@ -85,7 +85,7 @@ const schemesData = [
     name: 'Scheme8',
     primary: '#9C27B0',
     secondary: '#673AB7',
-    accent: '#FFC107',
+    accent: '#0055FF',
     light: '#F5F5F5',
     dark: '#212121'
   }
@@ -124,7 +124,7 @@ schemesData.forEach((scheme, index) => {
 schemesList.firstElementChild.classList.add('active');
 
 // Set the default scheme
-let activeScheme = schemesData[0];
+let activeScheme = schemesData[3];
 
 // Update the selected scheme name
 selectedScheme.textContent = "Scheme: Default";
