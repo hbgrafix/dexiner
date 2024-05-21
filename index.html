@@ -15,38 +15,113 @@
             </div>
             <div class="panel-body">
                 <ul class="tabs">
-                    <li class="tab active"><a href="#" class="tab-link">Home</a></li>
-                    <li class="tab"><a href="#" class="tab-link">Inventory</a></li>
-                    <li class="tab"><a href="#" class="tab-link">Purchase</a></li>
-                    <li class="tab"><a href="#" class="tab-link">Sale</a></li>
-                    <li class="tab"><a href="#" class="tab-link">Orders</a></li>
+                    <li class="tab active"><a id="home" href="#" class="tab-link">Home</a></li>
+                    <li class="tab"><a id="sale" href="#" class="tab-link">Sale</a></li>
+                    <li class="tab"><a id="Inventory" href="#" class="tab-link">Inventory</a></li>
+                    <li class="tab"><a id="purchase" href="#" class="tab-link">Purchase</a></li>
+                    <li class="tab"><a id="sale" href="#" class="tab-link">Sale</a></li>
+                    <li class="tab"><a id="order" href="#" class="tab-link">Order</a></li>
+                    <li class="tab"><a id="invoice" href="#" class="tab-link">Invoice</a></li>
+                    <li class="tab"><a id="invoice" href="#" class="tab-link">Customer</a></li>
+                    <li class="tab"><a id="invoice" href="#" class="tab-link">Vendor</a></li>
+                    <li class="tab"><a id="invoice" href="#" class="tab-link">Expenses</a></li>
+                    <li class="tab"><a id="invoice" href="#" class="tab-link">Payments</a></li>
+                    <li class="tab"><a id="invoice" href="#" class="tab-link">Reports</a></li>
+                    <li class="tab"><a id="invoice" href="#" class="tab-link">Notifications</a></li>
                 </ul>
             </div>
             <div class="panel-footer">
-                <button id="saveScheme" class="btn secondary-btn">Save Scheme</button>
+                <button id="settings" class="btn secondary-btn">settings</button>
             </div>
         </div>
-        <!--<div class="theme-toggle">
-        <span>Light mode</span>
-        <label class="switch">
-            <input type="checkbox" id="themeSwitch">
-            <span class="slider round"></span>
-        </label>
-        <span>Dark mode</span>
-        </div>-->
-        <section class="preview">
-            <div class="row">
-                <div id="sale" class="scorecard"></div>
-                <div id="purchase" class="scorecard"></div>
-                <div id="expense" class="scorecard"></div>
-                <div id="profit" class="scorecard"></div>
-            </div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
-            </div>
-        </section>
+        <div class="view">
+            <section id="view-header" class="row view-header">
+                <div class="row view-header-left">
+                    <div id="sale" class="scorecard">
+                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p id="label">SALE</p>
+                    </div>
+                    <div id="purchase" class="scorecard">
+                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p id="label">PURCHASE</p>
+                    </div>
+                    <div id="expense" class="scorecard">
+                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p id="label">EXPENSE</p>
+                    </div>
+                    <div id="profit" class="scorecard">
+                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p id="label">PROFIT</p>
+                    </div>
+                </div>
+                <div class="col view-header-right">
+                    <div id="datetime" class="row datetime">
+                        <div id="date" class="date" title="date">May 21, 2024</div>
+                        <div id="time" class="time" title="time">00:00:00 PM</div>
+                    </div>
+                    <div id="tools" class="row tools">
+                        <div id="calculator" class="tool calculator" title="Calculator"></div>
+                        <div id="calendar" class="tool calendar" title="Calendar"></div>
+                        <div id="Ccntacts" class="tool contacts" title="Contacts"></div>
+                        <div class="tool-list-btn"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="row tables">
+                <div id="tables-alert" class="row tables">
+                    <div class="col">
+                        <div class="row col-header">
+                            <h3>Alerts</h3>
+                        </div>
+                        <div class="row col-body">
+                            <div id="table-alert-stock" class="col table">
+                                <h4>Stock Alert</h4>
+                            </div>
+                            <div id="table-alert-expiry" class="col table">
+                                <h4>Expiry Alert</h4>
+                            </div>
+                            <div id="table-alert-credit" class="col table">
+                                <h4>Credit Alert</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tables-comparison" class="row tables">
+                    <div class="col">
+                        <div class="row col-header">
+                            <h3>Comparison</h3>
+                        </div>
+                        <div class="row col-body">
+                            <div id="table-comparison-product" class="col table">
+                                <h4>Products</h4>
+                            </div>
+                            <div id="table-comparison-customer" class="col table">
+                                <h4>Customers</h4>
+                            </div>
+                            <div id="table-comparison-salesman" class="col table">
+                                <h4>Salesman</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="charts-filter" class="row charts">
+                <div class="col">
+                    <div class="row col-header">
+                        <h3>Extensively Filterable Graphs & Charts</h3>
+                    </div>
+                    <div class="row col-body">
+                        <div id="chart" class="col chart">
+                            <h4>Chart</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="view-footer" class="row view-footer">
+                <div id="foot-left" class="col"></div>
+                <div id="foot-right" class="col"></div>
+            </section>
+        </div>
     </main>
 <script src="script.js"></script>
 </body>

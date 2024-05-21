@@ -9,9 +9,14 @@
   --clr-warning: red;
   --clr-caution: yellow;
 
+  --clr-sale: rgb(206, 142, 3);
+  --clr-purchase: rgb(36, 72, 170);
+  --clr-expense: rgb(192, 53, 53);
+  --clr-profit: rgb(20, 148, 41);
+
   --clr-light1: #fff;
   --clr-light2: #eee;
-  --clr-light3: #ccc;
+  --clr-light3: #ddd;
 
   --clr-dark1: #555;
   --clr-dark2: #333;
@@ -23,6 +28,7 @@
   --bg-clr: light-dark(var(--light-color), var(--dark-color));
   --txt-clr: light-dark(var(--dark-color), var(--light-color));
 
+  --test-border: 1px solid red;
 
   --border-light1: 1px solid var(--clr-light3);
   --border-light2: 1px solid var(--clr-light2);
@@ -34,10 +40,15 @@
   --border-secondary: 1px solid var(--clr-secondary);
   --border-accent: 1px solid var(--clr-accent);
 
-  --test-border: 1px solid red;
+  --radius1: 3px;
+  --radius2: 7px;
+  --radius3: 12px;
+  --radius4: 33px;
+  --radius5: 50px;
+  --radius6: 100px;
+
 }
 body {
-
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -45,23 +56,51 @@ body {
   background-color: var(--bg-clr);
   color: var(--txt-clr);
 }
+
+.dark-mode  {
+  color-scheme: dark;
+}
+.light-mode {
+  color-scheme: light;
+}
+
+
 main {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: space-between;
+  justify-content: flex-end;
+  align-items: flex-start;
   height: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .panel {
-  min-width: 175px;
+  width: 15%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--clr-light2);
+  background: var(--clr-light1);
+  box-shadow: 2px 0 10px 0 var(--clr-light2);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
+  position: fixed;
+  left: 0;
+  z-index: 99999999;
 }
 .panel h1 {
   color: var(--primary-color);
@@ -81,29 +120,57 @@ main {
 .panel-header,
 .panel-footer {
   padding-left: 10px;
+  margin-bottom: 20px ;
 }
 .panel-footer {
-  padding-bottom: 10px;
-  position: absolute;
+  margin-top: 20px;
+  position: relative;
   bottom: 0;
 }
 .panel-body {
-  min-height: 100%;
+  min-height: 60dvh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-align: end;
 }
+
+
+
+.tables::-webkit-scrollbar,
+.charts::-webkit-scrollbar,
+.panel-body::-webkit-scrollbar {
+  display: none;
+}
+.tables,
+.charts,
+.panel-body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 
 .tabs {
   height: 100%;
   padding: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .tabs :last-child {
   border-bottom: var(--border-light3)
 }
 .tab {
-  height: 40px;
+  min-height: 35px;
   width: 100%;
-  background: var(--clr-light2);
+  background: var(--clr-light1);
   border-top: var(--border-light3);
   display: flex;
   flex-direction: row;
@@ -121,53 +188,218 @@ main {
 
 
 
-.dark-mode  {
-  color-scheme: dark;
-}
-.light-mode {
-  color-scheme: light;
-}
 
-.preview {
+
+
+
+
+
+
+
+
+
+
+
+.view {
   min-height: 100%;
-  width: 100%;
+  width: 85%;
+  float: inline-end;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
-  padding: 10px;
+  padding-top: 120px;
+  overflow-x: hidden;
 }
+
 .row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 30px 0;
-  background-color: var(--clr-light2);
-  border-bottom: var(--border-light1);
+  padding: 5px;
   width: 100%;
   height: auto;
 }
 .col {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px;
   margin: 10px;
   background-color: var(--clr-light2);
   width: 100%;
   height: 100%;
   border: var(--border-light1);
 }
+
+.col-header {
+  height: 30px;
+  justify-content: flex-start;
+  padding: 5px;
+}
+.col-body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.col {
+  border-radius: var(--radius1);
+}
+
+
+.view-header {
+  height: 100px;
+  width: 84%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--clr-light1);
+  border-bottom: var(--border-light2);
+}
+
+.view-header-right {
+  background-color: unset;
+  border: unset;
+  width: 200px;
+  height: min-content;
+  font-size: 0.75rem;
+  text-align: right;
+}
+.datetime {
+  justify-content: flex-end;
+  max-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.date,
+.time {
+  margin: 0 5px;
+}
+
+
+
+.tools {
+  justify-content: flex-end;
+  height: 40px;
+}
+.tool {
+  width: 30px;
+  height: 30px;
+  background-color: var(--clr-light2);
+  margin: 0 10px;
+}
+.tool-list-btn,
+.tool-list-btn::before,
+.tool-list-btn::after {
+  content: "";
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  background-color: var(--clr-dark1);
+  margin-right: 10px;
+}
+.tool-list-btn::before {
+  transform: translateY(-13px);
+}
+.tool-list-btn::after {
+  transform: translateY(-13px);
+}
+.tool-list-btn:hover,
+.tool-list-btn:hover:before,
+.tool-list-btn:hover:after {
+  background-color: var(--accent-color);
+}
+
 .scorecard {
   width: 150px;
-  height: 50px;
+  height: 40px;
   background-color: var(--sec-clr);
-  color: var(--txt-clr);
-  border: 1px solid var(--txt-clr);
+  color: var(--clr-light1);
+  border-radius: var(--radius1);
   padding: 10px;
   text-align: center;
   margin: 0 10px;
 }
+
+.scorecard #currency {
+  color: var(--clr-light2);
+}
+.scorecard p {
+  margin: 0;
+  padding: 0;
+}
+.scorecard #digit {
+  font-weight: 600;
+}
+.scorecard #label {
+  padding-top: 7px;
+  font-size: 0.75rem;
+}
+.scorecard#sale {
+  background-color: var(--clr-sale);
+}
+.scorecard#purchase {
+  background-color: var(--clr-purchase);
+}
+.scorecard#expense {
+  background-color: var(--clr-expense);
+}
+.scorecard#profit {
+  background-color: var(--clr-profit);
+}
+
+
+
+
+
+
+
+.tables,
+.charts {
+  height: 100%;
+  background-color: unset;
+  margin: 0;
+  padding: 0;
+}
+.table,
+.chart {
+  background-color: var(--clr-light1);
+  padding: 0;
+  margin: 0;
+}
+.table {
+  height: 300px;
+  margin: 2px;
+}
+.chart {
+  height: 400px;
+}
+.table h4,
+.chart h4 {
+  padding: 5px;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .btn {
