@@ -55,6 +55,7 @@ body {
   box-sizing: border-box;
   background-color: var(--bg-clr);
   color: var(--txt-clr);
+  scroll-behavior: smooth;
 }
 
 .dark-mode  {
@@ -135,24 +136,7 @@ main {
   justify-content: flex-start;
   align-items: center;
   overflow: auto;
-  scroll-behavior: smooth;
-  scroll-snap-align: end;
 }
-
-
-
-.tables::-webkit-scrollbar,
-.charts::-webkit-scrollbar,
-.panel-body::-webkit-scrollbar {
-  display: none;
-}
-.tables,
-.charts,
-.panel-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 
 
 .tabs {
@@ -175,7 +159,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;;
+  align-items: flex-start;
 }
 .tab:hover {
   background-color: var(--primary-color);
@@ -184,6 +168,20 @@ main {
   background-color: var(--primary-color);
 }
 
+
+
+
+.tables::-webkit-scrollbar,
+.charts::-webkit-scrollbar,
+.panel-body::-webkit-scrollbar {
+  display: none;
+}
+.tables,
+.charts,
+.panel-body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 
 
@@ -209,6 +207,7 @@ main {
   justify-content: space-evenly;
   align-items: flex-start;
   padding-top: 120px;
+  padding-left: 16%;
   overflow-x: hidden;
 }
 
@@ -262,7 +261,7 @@ main {
 .view-header-right {
   background-color: unset;
   border: unset;
-  width: 200px;
+  width: 20%;
   height: min-content;
   font-size: 0.75rem;
   text-align: right;
@@ -288,7 +287,7 @@ main {
   width: 30px;
   height: 30px;
   background-color: var(--clr-light2);
-  margin: 0 10px;
+  margin: 5px;
 }
 .tool-list-btn,
 .tool-list-btn::before,
@@ -384,6 +383,12 @@ main {
 }
 
 
+
+.view-footer {
+  height: 300px;
+  margin: 20px 0;
+  padding: 0;
+}
 
 
 
