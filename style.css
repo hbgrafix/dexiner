@@ -7,10 +7,10 @@
   --clr-warning: red;
   --clr-caution: yellow;
 
-  --clr-sale: rgb(206, 142, 3);
-  --clr-purchase: rgb(36, 72, 170);
-  --clr-expense: rgb(192, 53, 53);
-  --clr-profit: rgb(20, 148, 41);
+  --clr-sale: #c90;
+  --clr-purchase: #24a;
+  --clr-expense: #c33;
+  --clr-profit: #192;
 
   --clr-light1: #fff;
   --clr-light2: #eee;
@@ -20,9 +20,13 @@
   --clr-dark2: #333;
   --clr-dark3: #111;
 
-  --border-light1: 1px solid var(--clr-light3);
+  --border-light1: 1px solid var(--clr-light1);
   --border-light2: 1px solid var(--clr-light2);
   --border-light3: 1px solid var(--clr-light3);
+
+  --border-dark1: 1px solid var(--clr-dark1);
+  --border-dark2: 1px solid var(--clr-dark2);
+  --border-dark3: 1px solid var(--clr-dark3);
 
   --radius1: 3px;
 }
@@ -178,8 +182,19 @@ main {
 .tables, .charts {
   padding: 20px;
 }
-
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
   margin-bottom: 20px;
 }
 
