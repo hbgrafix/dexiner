@@ -8,121 +8,116 @@
 </head>
 <body>
     <main>
-        <div class="panel">
-            <div class="panel-header">
-                <div><h1>AIMS</h1></div>
+        <aside class="panel">
+            <header class="panel-header">
+                <h1>AIMS</h1>
                 <div class="active-scheme">Business Name</div>
-            </div>
-            <div class="panel-body">
+            </header>
+            <nav class="panel-body">
                 <ul class="tabs">
-                    <li class="tab active"><a id="home" href="#" class="tab-link">Home</a></li>
-                    <li class="tab"><a id="sale" href="#" class="tab-link">Sale</a></li>
-                    <li class="tab"><a id="Inventory" href="#" class="tab-link">Inventory</a></li>
-                    <li class="tab"><a id="purchase" href="#" class="tab-link">Purchase</a></li>
-                    <li class="tab"><a id="sale" href="#" class="tab-link">Sale</a></li>
-                    <li class="tab"><a id="order" href="#" class="tab-link">Order</a></li>
-                    <li class="tab"><a id="invoice" href="#" class="tab-link">Invoice</a></li>
-                    <li class="tab"><a id="invoice" href="#" class="tab-link">Customer</a></li>
-                    <li class="tab"><a id="invoice" href="#" class="tab-link">Vendor</a></li>
-                    <li class="tab"><a id="invoice" href="#" class="tab-link">Expenses</a></li>
-                    <li class="tab"><a id="invoice" href="#" class="tab-link">Payments</a></li>
-                    <li class="tab"><a id="invoice" href="#" class="tab-link">Reports</a></li>
-                    <li class="tab"><a id="invoice" href="#" class="tab-link">Notifications</a></li>
+                    <li class="tab active"><a id="home-tab" href="#" class="tab-link">Home</a></li>
+                    <li class="tab"><a id="sale-tab" href="#" class="tab-link">Sale</a></li>
+                    <li class="tab"><a id="inventory-tab" href="#" class="tab-link">Inventory</a></li>
+                    <li class="tab"><a id="purchase-tab" href="#" class="tab-link">Purchase</a></li>
+                    <li class="tab"><a id="order-tab" href="#" class="tab-link">Order</a></li>
+                    <li class="tab"><a id="invoice-tab" href="#" class="tab-link">Invoice</a></li>
+                    <li class="tab"><a id="customer-tab" href="#" class="tab-link">Customer</a></li>
+                    <li class="tab"><a id="vendor-tab" href="#" class="tab-link">Vendor</a></li>
+                    <li class="tab"><a id="expenses-tab" href="#" class="tab-link">Expenses</a></li>
+                    <li class="tab"><a id="payments-tab" href="#" class="tab-link">Payments</a></li>
+                    <li class="tab"><a id="reports-tab" href="#" class="tab-link">Reports</a></li>
+                    <li class="tab"><a id="notifications-tab" href="#" class="tab-link">Notifications</a></li>
                 </ul>
-            </div>
-            <div class="panel-footer">
-                <button id="settings" class="btn secondary-btn">settings</button>
-            </div>
-        </div>
+            </nav>
+            <footer class="panel-footer">
+                <button id="settings" class="btn secondary-btn">Settings</button>
+            </footer>
+        </aside>
         <div class="view">
-            <section id="view-header" class="row view-header">
+            <header id="view-header" class="row view-header">
                 <div class="row view-header-left">
-                    <div id="sale" class="scorecard">
-                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
-                        <p id="label">SALE</p>
+                    <div class="scorecard sale">
+                        <p class="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p class="label">SALE</p>
                     </div>
-                    <div id="purchase" class="scorecard">
-                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
-                        <p id="label">PURCHASE</p>
+                    <div class="scorecard purchase">
+                        <p class="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p class="label">PURCHASE</p>
                     </div>
-                    <div id="expense" class="scorecard">
-                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
-                        <p id="label">EXPENSE</p>
+                    <div class="scorecard expense">
+                        <p class="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p class="label">EXPENSE</p>
                     </div>
-                    <div id="profit" class="scorecard">
-                        <p id="digit"><span class="currency">Rs. </span>12,345.00</p>
-                        <p id="label">PROFIT</p>
+                    <div class="scorecard profit">
+                        <p class="digit"><span class="currency">Rs. </span>12,345.00</p>
+                        <p class="label">PROFIT</p>
                     </div>
                 </div>
                 <div class="col view-header-right">
-                    <div id="datetime" class="row datetime">
-                        <div id="date" class="date" title="date">May 21, 2024</div>
-                        <div id="time" class="time" title="time">00:00:00 PM</div>
+                    <div class="row datetime">
+                        <div class="date" title="date">May 21, 2024</div>
+                        <div class="time" title="time">00:00:00 PM</div>
                     </div>
-                    <div id="tools" class="row tools">
-                        <div id="calculator" class="tool calculator" title="Calculator"></div>
-                        <div id="calendar" class="tool calendar" title="Calendar"></div>
-                        <div id="Ccntacts" class="tool contacts" title="Contacts"></div>
+                    <div class="row tools">
+                        <div class="tool calculator" title="Calculator"></div>
+                        <div class="tool calendar" title="Calendar"></div>
+                        <div class="tool contacts" title="Contacts"></div>
                         <div class="tool-list-btn"></div>
                     </div>
                 </div>
-            </section>
+            </header>
             <section class="row tables">
-                <div id="tables-alert" class="row tables">
-                    <div class="col">
-                        <div class="row col-header">
-                            <h3>Alerts</h3>
+                <div class="col alerts">
+                    <div class="row col-header">
+                        <h3>Alerts</h3>
+                    </div>
+                    <div class="row col-body">
+                        <div class="col table">
+                            <h4>Stock Alert</h4>
                         </div>
-                        <div class="row col-body">
-                            <div id="table-alert-stock" class="col table">
-                                <h4>Stock Alert</h4>
-                            </div>
-                            <div id="table-alert-expiry" class="col table">
-                                <h4>Expiry Alert</h4>
-                            </div>
-                            <div id="table-alert-credit" class="col table">
-                                <h4>Credit Alert</h4>
-                            </div>
+                        <div class="col table">
+                            <h4>Expiry Alert</h4>
+                        </div>
+                        <div class="col table">
+                            <h4>Credit Alert</h4>
                         </div>
                     </div>
                 </div>
-                <div id="tables-comparison" class="row tables">
-                    <div class="col">
-                        <div class="row col-header">
-                            <h3>Comparison</h3>
+                <div class="col comparisons">
+                    <div class="row col-header">
+                        <h3>Comparison</h3>
+                    </div>
+                    <div class="row col-body">
+                        <div class="col table">
+                            <h4>Products</h4>
                         </div>
-                        <div class="row col-body">
-                            <div id="table-comparison-product" class="col table">
-                                <h4>Products</h4>
-                            </div>
-                            <div id="table-comparison-customer" class="col table">
-                                <h4>Customers</h4>
-                            </div>
-                            <div id="table-comparison-salesman" class="col table">
-                                <h4>Salesman</h4>
-                            </div>
+                        <div class="col table">
+                            <h4>Customers</h4>
+                        </div>
+                        <div class="col table">
+                            <h4>Salesman</h4>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="charts-filter" class="row charts">
+            <section class="row charts">
                 <div class="col">
                     <div class="row col-header">
                         <h3>Extensively Filterable Graphs & Charts</h3>
                     </div>
                     <div class="row col-body">
-                        <div id="chart" class="col chart">
+                        <div class="col chart">
                             <h4>Chart</h4>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="view-footer" class="row view-footer">
-                <div id="foot-left" class="col"></div>
-                <div id="foot-right" class="col"></div>
-            </section>
+            <footer id="view-footer" class="row view-footer">
+                <div class="col foot-left"></div>
+                <div class="col foot-right"></div>
+            </footer>
         </div>
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
