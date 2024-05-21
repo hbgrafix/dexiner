@@ -3,58 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEXINER</title>
+    <title>AIMS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><a href="#"><h1>DEXINER 1.0</h1></a></header>
-    <button id="togglePanel" class="btn primary-btn toggle-btn">Show Panel</button>
-    <div class="panel hidden">
-        <div class="active-scheme">Scheme: Default</div>
-        <div class="schemes-container">
-            <ul class="schemes"></ul>
+    <main>
+        <div class="panel">
+            <div class="panel-header">
+                <div><h1>AIMS</h1></div>
+                <div class="active-scheme">Business Name</div>
+            </div>
+            <div class="panel-body">
+                <ul class="tabs">
+                    <li class="tab active"><a href="#" class="tab-link">Home</a></li>
+                    <li class="tab"><a href="#" class="tab-link">Inventory</a></li>
+                    <li class="tab"><a href="#" class="tab-link">Purchase</a></li>
+                    <li class="tab"><a href="#" class="tab-link">Sale</a></li>
+                    <li class="tab"><a href="#" class="tab-link">Orders</a></li>
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <button id="saveScheme" class="btn secondary-btn">Save Scheme</button>
+            </div>
         </div>
-        <button id="saveScheme" class="btn secondary-btn">Save Scheme</button>
-    </div>
-    <div class="theme-toggle">
-      <span>Light mode</span>
-      <label class="switch">
-          <input type="checkbox" id="themeSwitch">
-          <span class="slider round"></span>
-      </label>
-      <span>Dark mode</span>
-    </div>
-    <section class="preview">
-      <div class="toggleLightDark">Toggle Light-Dark Scheme <span></span></div>
-    </section>
-    <section id="palette" class="palette section">
-        <div class="clr" id="primary">
-            <div class="display"></div>
-            <div class="hex">#123456</div>
-        </div>
-        <div class="clr" id="secondary">
-            <div class="display"></div>
-            <div class="hex">#123456</div>
-        </div>
-        <div class="clr" id="accent">
-            <div class="display"></div>
-            <div class="hex">#123456</div>
-        </div>
-        <div class="clr" id="light">
-            <div class="display"></div>
-            <div class="hex">#123456</div>
-        </div>
-        <div class="clr" id="dark">
-            <div class="display"></div>
-            <div class="hex">#123456</div>
-        </div>
-        <input type="color" id="colorPicker" style="display: none;">
-    </section>
-
-    <footer>
-        <p>DEXINER &copy; 2024. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+        <!--<div class="theme-toggle">
+        <span>Light mode</span>
+        <label class="switch">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider round"></span>
+        </label>
+        <span>Dark mode</span>
+        </div>-->
+        <section class="preview">
+            <div class="row">
+                <div class="scorecard"></div>
+                <div class="scorecard"></div>
+                <div class="scorecard"></div>
+                <div class="scorecard"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </section>
+    </main>
+<script src="script.js"></script>
 </body>
 </html>

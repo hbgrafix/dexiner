@@ -1,73 +1,21 @@
 :root{
-  color-scheme: light dark;
+  color-scheme: light;
 
-  --primary-color;
-  --secondary-color;
-  --accent-color;
-  --light-color;
-  --dark-color;
+  --primary-color: #6cf;
+  --secondary-color: #003;
+  --accent-color: #6cf;
 
+  --clr-info: green;
+  --clr-warning: red;
+  --clr-caution: yellow;
 
-/* Primary Color Variants */
---primary-color-alpha-100: calc(var(--primary-color) + 'FF');
---primary-color-alpha-90: calc(var(--primary-color) + 'E6');
---primary-color-alpha-80: calc(var(--primary-color) + 'CC');
---primary-color-alpha-70: calc(var(--primary-color) + 'B3');
---primary-color-alpha-60: calc(var(--primary-color) + '99');
---primary-color-alpha-50: calc(var(--primary-color) + '80');
---primary-color-alpha-40: calc(var(--primary-color) + '66');
---primary-color-alpha-30: calc(var(--primary-color) + '4D');
---primary-color-alpha-20: calc(var(--primary-color) + '33');
---primary-color-alpha-10: calc(var(--primary-color) + '1A');
+  --clr-light1: #fff;
+  --clr-light2: #eee;
+  --clr-light3: #ccc;
 
-/* Secondary Color Variants */
---secondary-color-alpha-100: calc(var(--secondary-color) + 'FF');
---secondary-color-alpha-90: calc(var(--secondary-color) + 'E6');
---secondary-color-alpha-80: calc(var(--secondary-color) + 'CC');
---secondary-color-alpha-70: calc(var(--secondary-color) + 'B3');
---secondary-color-alpha-60: calc(var(--secondary-color) + '99');
---secondary-color-alpha-50: calc(var(--secondary-color) + '80');
---secondary-color-alpha-40: calc(var(--secondary-color) + '66');
---secondary-color-alpha-30: calc(var(--secondary-color) + '4D');
---secondary-color-alpha-20: calc(var(--secondary-color) + '33');
---secondary-color-alpha-10: calc(var(--secondary-color) + '1A');
-
-/* Accent Color Variants */
---accent-color-alpha-100: calc(var(--accent-color) + 'FF');
---accent-color-alpha-90: calc(var(--accent-color) + 'E6');
---accent-color-alpha-80: calc(var(--accent-color) + 'CC');
---accent-color-alpha-70: calc(var(--accent-color) + 'B3');
---accent-color-alpha-60: calc(var(--accent-color) + '99');
---accent-color-alpha-50: calc(var(--accent-color) + '80');
---accent-color-alpha-40: calc(var(--accent-color) + '66');
---accent-color-alpha-30: calc(var(--accent-color) + '4D');
---accent-color-alpha-20: calc(var(--accent-color) + '33');
---accent-color-alpha-10: calc(var(--accent-color) + '1A');
-
-/* Light Color Variants */
---light-color-alpha-100: calc(var(--light-color) + 'FF');
---light-color-alpha-90: calc(var(--light-color) + 'E6');
---light-color-alpha-80: calc(var(--light-color) + 'CC');
---light-color-alpha-70: calc(var(--light-color) + 'B3');
---light-color-alpha-60: calc(var(--light-color) + '99');
---light-color-alpha-50: calc(var(--light-color) + '80');
---light-color-alpha-40: calc(var(--light-color) + '66');
---light-color-alpha-30: calc(var(--light-color) + '4D');
---light-color-alpha-20: calc(var(--light-color) + '33');
---light-color-alpha-10: calc(var(--light-color) + '1A');
-
-/* Dark Color Variants */
---dark-color-alpha-100: calc(var(--dark-color) + 'FF');
---dark-color-alpha-90: calc(var(--dark-color) + 'E6');
---dark-color-alpha-80: calc(var(--dark-color) + 'CC');
---dark-color-alpha-70: calc(var(--dark-color) + 'B3');
---dark-color-alpha-60: calc(var(--dark-color) + '99');
---dark-color-alpha-50: calc(var(--dark-color) + '80');
---dark-color-alpha-40: calc(var(--dark-color) + '66');
---dark-color-alpha-30: calc(var(--dark-color) + '4D');
---dark-color-alpha-20: calc(var(--dark-color) + '33');
---dark-color-alpha-10: calc(var(--dark-color) + '1A');
-
+  --clr-dark1: #555;
+  --clr-dark2: #333;
+  --clr-dark3: #111;
 
 
   --pri-clr: light-dark(var(--primary-color), var(--secondary-color));
@@ -76,18 +24,20 @@
   --txt-clr: light-dark(var(--dark-color), var(--light-color));
 
 
-  --border-100: var(--primary-color-alpha-100);
-  --border-90: var(--primary-color-alpha-90);
-  --border-80: var(--primary-color-alpha-80);
-  --border-70: var(--primary-color-alpha-70);
-  --border-60: var(--primary-color-alpha-60);
-  --border-50: var(--primary-color-alpha-50);
-  --border-40: var(--primary-color-alpha-40);
-  --border-30: var(--primary-color-alpha-30);
-  --border-20: var(--primary-color-alpha-20);
-  --border-10: var(--primary-color-alpha-10);
+  --border-light1: 1px solid var(--clr-light3);
+  --border-light2: 1px solid var(--clr-light2);
+  --border-light3: 1px solid var(--clr-light3);
+  --border-dark1: 1px solid var(--clr-dark1);
+  --border-dark2: 1px solid var(--clr-dark2);
+  --border-dark3: 1px solid var(--clr-dark3);
+  --border-primary: 1px solid var(--clr-primary);
+  --border-secondary: 1px solid var(--clr-secondary);
+  --border-accent: 1px solid var(--clr-accent);
+
+  --test-border: 1px solid red;
 }
 body {
+
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -95,18 +45,80 @@ body {
   background-color: var(--bg-clr);
   color: var(--txt-clr);
 }
-header {
-  height: 50px;
-  padding: 0 10%;
-  width: 100%;
-  border-bottom: 1px solid var(--txt-clr);
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: space-between;
+  height: 100%;
 }
-header a {
-  color: var(--txt-clr);
+.panel {
+  min-width: 175px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--clr-light2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
 }
-header a:hover {
+.panel h1 {
   color: var(--primary-color);
 }
+.panel a {
+  color: var(--txt-clr);
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}
+.panel-header,
+.panel-footer {
+  padding-left: 10px;
+}
+.panel-footer {
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+}
+.panel-body {
+  min-height: 100%;
+  width: 100%;
+}
+
+.tabs {
+  height: 100%;
+  padding: 0;
+  width: 100%;
+}
+.tabs :last-child {
+  border-bottom: var(--border-light3)
+}
+.tab {
+  height: 40px;
+  width: 100%;
+  background: var(--clr-light2);
+  border-top: var(--border-light3);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;;
+}
+.tab:hover {
+  background-color: var(--primary-color);
+}
+.tab.active {
+  background-color: var(--primary-color);
+}
+
+
+
 
 
 .dark-mode  {
@@ -117,104 +129,46 @@ header a:hover {
 }
 
 .preview {
+  min-height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
 }
-.toggleLightDark {
-  width: 350px;
-  height: 250px;
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0;
+  background-color: var(--clr-light2);
+  border-bottom: var(--border-light1);
+  width: 100%;
+  height: auto;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 10px;
+  background-color: var(--clr-light2);
+  width: 100%;
+  height: 100%;
+  border: var(--border-light1);
+}
+.scorecard {
+  width: 150px;
+  height: 50px;
   background-color: var(--sec-clr);
   color: var(--txt-clr);
   border: 1px solid var(--txt-clr);
   padding: 10px;
   text-align: center;
-  margin: 120px 0;
-
+  margin: 0 10px;
 }
 
-
-.panel {
-  position: fixed;
-  top: 130px;
-  left: 10%;
-  padding: 10px;
-  background: var(--bg-clr);
-  border: 1px solid var(--txt-clr);
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-
-.panel.hidden {
-  display: none;
-}
-
-.active-scheme {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  min-width: 200px;
-}
-
-.schemes-container {
-  max-height: 200px;
-  overflow-y: auto;
-  margin: 10px 0;
-  padding: 0 10px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-}
-
-.schemes {
-  list-style-type: none;
-  padding: 0;
-}
-
-.schemes li {
-  padding: 5px;
-  cursor: pointer;
-  border: 1px solid var(--txt-clr);
-  margin-bottom: 5px;
-  border-radius: 3px;
-}
-
-.schemes li.active {
-  background-color: var(--secondary-color);
-  color: var(--bg-clr)
-}
-
-.palette {
-  display: flex;
-  justify-content: center;
-  border: 1px solid var(--txt-clr);
-  padding: 10px;
-}
-
-.clr {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-}
-
-.display {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-  border: 1px solid var(--txt-clr);
-  cursor: pointer;
-}
-
-.hex {
-  font-size: 0.9em;
-}
 
 .btn {
   padding: 10px 20px;
@@ -252,10 +206,6 @@ header a:hover {
   top: 85px;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-}
 .theme-toggle {
   position: fixed;
   top: 90px;
