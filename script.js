@@ -10,4 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(updateDateTime, 1000);
     updateDateTime();
+
 });
+
