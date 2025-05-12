@@ -1,0 +1,640 @@
+:root {
+    --text: hsl(0, 0%, 20%);
+    --background: hsl(120, 20%, 99%);
+    --primary: hsl(119, 38%, 42%);
+    --secondary: hsl(157, 58%, 43%);
+    --accent: hsl(177, 61%, 53%);
+    --dark: hsl(187, 94%, 12%);
+    --light: hsl(170, 75%, 86%);
+
+    --shadow: hsla(0, 0%, 0%, 0.3);
+
+    --linearPrimarySecondary: linear-gradient(var(--primary), var(--secondary));
+    --linearPrimaryAccent: linear-gradient(var(--primary), var(--accent));
+    --linearSecondaryAccent: linear-gradient(var(--secondary), var(--accent));
+    --radialPrimarySecondary: radial-gradient(var(--primary), var(--secondary));
+    --radialPrimaryAccent: radial-gradient(var(--primary), var(--accent));
+    --radialSecondaryAccent: radial-gradient(var(--secondary), var(--accent));    
+    
+    --text-50: hsl(0, 0%, 95%);
+    --text-100: hsl(0, 0%, 90%);
+    --text-200: hsl(0, 0%, 80%);
+    --text-300: hsl(0, 0%, 70%);
+    --text-400: hsl(0, 0%, 60%);
+    --text-500: hsl(0, 0%, 50%);
+    --text-600: hsl(0, 0%, 40%);
+    --text-700: hsl(0, 0%, 30%);
+    --text-800: hsl(0, 0%, 20%);
+    --text-900: hsl(0, 0%, 10%);
+    --text-950: hsl(0, 0%, 5%);
+  
+    --background-50: hsl(120, 20%, 95%);
+    --background-100: hsl(120, 22%, 90%);
+    --background-200: hsl(120, 20%, 80%);
+    --background-300: hsl(120, 20%, 70%);
+    --background-400: hsl(120, 20%, 60%);
+    --background-500: hsl(120, 20%, 50%);
+    --background-600: hsl(120, 20%, 40%);
+    --background-700: hsl(120, 20%, 30%);
+    --background-800: hsl(120, 20%, 20%);
+    --background-900: hsl(120, 22%, 10%);
+    --background-950: hsl(120, 20%, 5%);
+  
+    --primary-50: hsl(114, 38%, 95%);
+    --primary-100: hsl(120, 37%, 90%);
+    --primary-200: hsl(120, 37%, 80%);
+    --primary-300: hsl(119, 39%, 70%);
+    --primary-400: hsl(118, 38%, 60%);
+    --primary-500: hsl(119, 38%, 50%);
+    --primary-600: hsl(118, 38%, 40%);
+    --primary-700: hsl(119, 39%, 30%);
+    --primary-800: hsl(120, 37%, 20%);
+    --primary-900: hsl(120, 37%, 10%);
+    --primary-950: hsl(120, 38%, 5%);
+  
+    --secondary-50: hsl(156, 60%, 95%);
+    --secondary-100: hsl(157, 57%, 90%);
+    --secondary-200: hsl(157, 59%, 80%);
+    --secondary-300: hsl(157, 58%, 70%);
+    --secondary-400: hsl(157, 58%, 60%);
+    --secondary-500: hsl(157, 58%, 50%);
+    --secondary-600: hsl(157, 58%, 40%);
+    --secondary-700: hsl(157, 58%, 30%);
+    --secondary-800: hsl(157, 59%, 20%);
+    --secondary-900: hsl(157, 57%, 10%);
+    --secondary-950: hsl(156, 60%, 5%);
+  
+    --accent-50: hsl(176, 62%, 95%);
+    --accent-100: hsl(176, 61%, 90%);
+    --accent-200: hsl(177, 61%, 80%);
+    --accent-300: hsl(177, 61%, 70%);
+    --accent-400: hsl(177, 61%, 60%);
+    --accent-500: hsl(177, 61%, 50%);
+    --accent-600: hsl(177, 61%, 40%);
+    --accent-700: hsl(177, 61%, 30%);
+    --accent-800: hsl(177, 61%, 20%);
+    --accent-900: hsl(176, 61%, 10%);
+    --accent-950: hsl(176, 62%, 5%);
+
+}
+[data-theme="dark"] {
+    --text: hsl(0, 0%, 80%);
+    --background: hsl(120, 20%, 1%);
+    --primary: hsl(119, 38%, 58%);
+    --secondary: hsl(157, 58%, 57%);
+    --accent: hsl(177, 61%, 47%);
+    --dark: hsl(187, 94%, 12%);
+    --light: hsl(170, 75%, 86%);
+
+    --text-50: hsl(0, 0%, 5%);
+    --text-100: hsl(0, 0%, 10%);
+    --text-200: hsl(0, 0%, 20%);
+    --text-300: hsl(0, 0%, 30%);
+    --text-400: hsl(0, 0%, 40%);
+    --text-500: hsl(0, 0%, 50%);
+    --text-600: hsl(0, 0%, 60%);
+    --text-700: hsl(0, 0%, 70%);
+    --text-800: hsl(0, 0%, 80%);
+    --text-900: hsl(0, 0%, 90%);
+    --text-950: hsl(0, 0%, 95%);
+
+    --background-50: hsl(120, 20%, 5%);
+    --background-100: hsl(120, 22%, 10%);
+    --background-200: hsl(120, 20%, 20%);
+    --background-300: hsl(120, 20%, 30%);
+    --background-400: hsl(120, 20%, 40%);
+    --background-500: hsl(120, 20%, 50%);
+    --background-600: hsl(120, 20%, 60%);
+    --background-700: hsl(120, 20%, 70%);
+    --background-800: hsl(120, 20%, 80%);
+    --background-900: hsl(120, 22%, 90%);
+    --background-950: hsl(120, 20%, 95%);
+
+    --primary-50: hsl(120, 38%, 5%);
+    --primary-100: hsl(120, 37%, 10%);
+    --primary-200: hsl(120, 37%, 20%);
+    --primary-300: hsl(119, 39%, 30%);
+    --primary-400: hsl(118, 38%, 40%);
+    --primary-500: hsl(119, 38%, 50%);
+    --primary-600: hsl(118, 38%, 60%);
+    --primary-700: hsl(119, 39%, 70%);
+    --primary-800: hsl(120, 37%, 80%);
+    --primary-900: hsl(120, 37%, 90%);
+    --primary-950: hsl(114, 38%, 95%);
+
+    --secondary-50: hsl(156, 60%, 5%);
+    --secondary-100: hsl(157, 57%, 10%);
+    --secondary-200: hsl(157, 59%, 20%);
+    --secondary-300: hsl(157, 58%, 30%);
+    --secondary-400: hsl(157, 58%, 40%);
+    --secondary-500: hsl(157, 58%, 50%);
+    --secondary-600: hsl(157, 58%, 60%);
+    --secondary-700: hsl(157, 58%, 70%);
+    --secondary-800: hsl(157, 59%, 80%);
+    --secondary-900: hsl(157, 57%, 90%);
+    --secondary-950: hsl(156, 60%, 95%);
+
+    --accent-50: hsl(176, 62%, 5%);
+    --accent-100: hsl(176, 61%, 10%);
+    --accent-200: hsl(177, 61%, 20%);
+    --accent-300: hsl(177, 61%, 30%);
+    --accent-400: hsl(177, 61%, 40%);
+    --accent-500: hsl(177, 61%, 50%);
+    --accent-600: hsl(177, 61%, 60%);
+    --accent-700: hsl(177, 61%, 70%);
+    --accent-800: hsl(177, 61%, 80%);
+    --accent-900: hsl(176, 61%, 90%);
+    --accent-950: hsl(176, 62%, 95%);
+
+}
+:root {
+    --shadow-box-default: 3px 5px 10px 1px var(--shadow);
+    --shadow-box-primary: 0 0 20px 1px var(--primary-200);
+    --shadow-box-secondary: 0 0 20px 1px var(--secondary-200);
+    --shadow-box-accent: 0 0 20px 1px var(--accent-200);
+
+    --border-min: 1px solid var(--background-400);
+    --border-mid: 2px solid var(--background-400);
+    --border-max: 4px solid var(--background-400);
+
+    --radius-min: 5px;
+    --radius-mid: 10px;
+    --radius-max: 20px;
+
+    --space-min: 4px;
+    --space-mid: 8px;
+    --space-max: 16px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: var(--text);
+    background: var(--background);
+
+    font-family: sans-serif;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.header {
+    background: var(--linearPrimaryAccent);
+    > h1 {
+        color: var(--text-100);
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+}
+.header #theme-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.palette {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.color {
+    width: 100%;
+    height: 30px;
+}
+
+.container {
+    padding: var(--space-max);
+}
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.row-responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-min);
+}
+@media only screen and (max-width: 600px) {
+    .row-responsive {
+        flex-direction: column;
+    }
+}
+.grid {
+    display: grid;
+    max-width: 600px;
+}
+
+.grid-item {
+    margin-bottom: var(--space-max);
+}
+
+.modal {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text);
+}
+
+p, a {
+    color: var(--text);
+}
+
+span {
+    color: var(--text-50);
+    display: inline-block;
+    padding: var(--space-mid);
+
+    border-radius: var(--radius-min);
+
+    background-color: var(--secondary);
+
+    font-style: italic;
+}
+
+button {
+    --bg: var(--light);
+    margin: var(--space-min);
+    min-width: 50px;
+    width: 120px;
+    height: 40px;
+
+    font-size: medium;
+
+    outline: none;
+    border: unset;
+
+    border-radius: var(--radius-min);
+    color: var(--light);
+    background-color: var(--dark);
+    border-color: var(--background-900);
+
+    cursor: pointer;
+
+    transition: all 300ms ease-in-out;
+}
+button:hover {
+    filter: hue-rotate(10deg);
+    border: var(--border-min);
+    border-color: var(--light);
+    box-shadow: var(--shadow-box-default);
+    transform: translateY(-1px);
+}
+.primary {
+    --bg: var(--primary-100);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--text-50);
+}
+.secondary {
+    --bg: var(--secondary-100);
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--text-50);
+}
+.accent {
+    --bg: var(--accent-100);
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--dark);
+}
+.background {
+    --bg: var(--accent-100);
+    background-color: var(--background);
+    border-color: var(--background);
+    color: var(--dark);
+}
+.text {
+    --bg: var(--accent-100);
+    background-color: var(--text);
+    border-color: var(--text);
+    color: var(--dark);
+}
+.dark {
+    --bg: var(--accent-100);
+    background-color: var(--dark);
+    border-color: var(--dark);
+    color: var(--light);
+}
+.light {
+    --bg: var(--accent-100);
+    background-color: var(--light);
+    border-color: var(--light);
+    color: var(--dark);
+}
+
+
+
+.gradient {
+    --bg: var(--primary-100);
+    background: var(--linearPrimaryAccent);
+    border-color: var(--primary);
+    color: var(--text-50);
+}
+.outline {
+    color: var(--text);
+    background: unset;
+    background: none;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+}
+.outline:hover {
+    filter: opacity(0.9);
+    background: var(--bg);
+    border: var(--border-min);
+}
+.disabled {
+    pointer-events: none;
+    color: var(--text-300);
+    border-color: var(--background-300);
+    background-color: var(--background-100);
+    cursor: not-allowed;
+}
+.disabled.outline {
+    color: var(--text-300);
+    border-color: var(--background-200);
+    background-color: unset;
+}
+.grid-item {
+    container-name: responsive;
+    container-type: inline-size;
+}
+.responsive {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+@container responsive (max-width: 700px) {
+    .responsive {
+        flex-direction: column;
+    }
+}
+
+.card {
+    min-height: 400px;
+    width: 300px;
+
+    border: var(--border-min);
+    border-color: var(--background-500);
+
+    border-radius: var(--radius-mid);
+
+
+    padding: var(--space-mid);
+
+    transition: all 300ms ease-in-out;
+    backdrop-filter: blur(20px);
+
+    > h4 {
+        color: var(--primary);
+    }
+}
+.card:hover {
+    border-color: var(--background-100);
+    box-shadow: var(--shadow-box-default);
+    transform: translateY(-3px);
+}
+.card.fancy {
+    border-color: var(--accent-400);
+    background-image: var(--linearPrimaryAccent);
+    > h4 {
+        color: var(--text-50);
+    }
+    > p {
+        color: var(--text-100);
+    }
+}
+
+
+/*
+
+form {
+    border: var(--border-min);
+    border-bottom: var(--border-max);
+    border-color: var(--clr-light-alphalpha);
+    border-radius: var(--radius-mid);
+
+    padding: var(--space-max) var(--space-mid);
+
+    width: 100%;
+    max-width: 600px;
+
+}
+
+
+input {
+    background: unset;
+    outline: unset;
+    border: var(--border-min-alpha);
+    border-radius: var(--radius-min);
+    color: var(--clr-light);
+
+    min-height: 40px;
+    width: 100%;
+
+    font-size: large;
+
+    outline: none;
+
+    padding: var(--space-mid);
+
+    margin-top: var(--space-mid);
+    margin-bottom: var(--space-max);
+}
+
+input:active,
+input:focus {
+    border-color: var(--clr-neutral);
+}
+
+*/
+.form {
+  width: 100%;
+  max-width: 600px;
+  padding: var(--space-max);
+  border: var(--border-min);
+  border-color: var(--background-200);
+  border-radius: var(--radius-mid);
+  background-color: var(--background, transparent);
+  box-sizing: border-box;
+
+  backdrop-filter: blur(20px);
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-max);
+  color: var(--text);
+}
+
+.label {
+  display: block;
+  margin-bottom: var(--space-min);
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.input {
+  width: 100%;
+  min-height: 40px;
+  font-size: large;
+  padding: var(--space-mid);
+  margin-top: var(--space-min);
+  margin-bottom: var(--space-max);
+  border: var(--border-min);
+  border-radius: var(--radius-min);
+  color: var(--text);
+  background: unset;
+  outline: none;
+}
+
+.input:focus,
+.input:active {
+  border-color: var(--background-800);
+  background-color: var(--background-50);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-min);
+  margin-bottom: var(--space-mid);
+  color: var(--clr-light);
+  font-size: 0.95rem;
+}
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(10px) saturate(0%) brightness(100%);
+
+    background-color: var(--background-200); /* Fallback color */
+
+    transition: all 300ms ease-in;
+
+    padding: 5%;
+}
+.modal-content {
+    background-color: var(--background);
+    padding: var(--space-max);
+    border: var(--border-min);
+    border-color: var(--background-100);
+    border-radius: var(--radius-mid);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+.modal .close {
+    background-color: unset;
+    color: var(--clr-dark);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: var(--space-min);
+    right: var(--space-mid);
+}
+.modal .close:hover,
+.modal .close:focus {
+    color: var(--clr-neutral);
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    margin-right: var(--space-max);
+    margin-bottom: var(--space-mid);
+    padding-bottom: var(--space-mid);
+    border-bottom: var(--border-min);
+    border-color: var(--background-200);
+}
+.modal-header h4 {
+    color: var(--text);
+    margin: 0;
+    font-size: larger;
+}
+.modal-body {
+    margin-right: var(--space-max);
+    margin-bottom: var(--space-mid);
+    padding-bottom: var(--space-mid);
+    color: var(--text) !important;
+    p {
+        color: inherit;
+    }
+}
+.modal-footer {
+    margin-right: var(--space-max);
+    margin-bottom: 0;
+}
+
+
+.table-container {
+    overflow-x: auto;
+    padding: 0;
+    border: var(--border-min);
+    border-radius: var(--radius-min);
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(20px);
+}
+table {
+    margin: 0;
+    border-collapse: collapse;
+    width: 100%;
+    border: var(--border-min);
+    border-radius: var(--radius-min);
+    overflow: hidden;
+}
+
+th, td {
+    text-align: left;
+    padding: var(--space-mid);
+    margin: 0;
+    border: var(--border-min);
+}
+
+th {
+    background-color: var(--primary-700);
+    color: var(--text-50);
+    font-weight: medium;
+    font-size: large;
+}
+
+tbody > :nth-child(even) {
+    background-color: var(--secondary-50);
+}
