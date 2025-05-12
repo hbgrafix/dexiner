@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMY Health Design System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="container header">
+        <h1>BMY Heath Design System</h1>
+        <button id="theme-button" onclick="(d=>d.dataset.theme=d.dataset.theme=='dark'?'light':'dark')(document.body)">Theme</button>
+    </div>
+    <div class="palette">
+        <div class="color primary"></div>
+        <div class="color secondary"></div>
+        <div class="color accent"></div>
+        <div class="color background"></div>
+        <div class="color text"></div>
+        <div class="color light"></div>
+        <div class="color dark"></div>
+    </div>
+    <div class="container">
+        <h2>Design System Components and Elements</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>Button</h3>
+                <p>A button component that can be used to trigger an action.</p>
+
+                <button>Default</button>
+                <button class="outline">Default</button>
+                <br>
+                <button class="primary">Primary</button>
+                <button class="primary outline">Primary</button>
+                <br>
+                <button class="secondary">Secondary</button>
+                <button class="secondary outline">Secondary</button>
+                <br>
+                <button class="accent">Accent</button>
+                <button class="accent outline">Accent</button>
+                <br>
+                <button class="gradient">Gradient</button>
+                <button class="gradient outline">Gradient</button>
+                <br>
+                <button class="disabled">Disabled</button>
+                <button class="disabled outline">Disabled</button>
+
+            </div>
+            <div class="grid-item">
+                <h3>Card</h3>
+                <p>A card component that can be used to display information.</p>
+                <div class="wrapper row-responsive">
+                    <div class="card">
+                        <h4>Card title</h4>
+                        <p>Card content</p>
+                    </div>
+                    <div class="card fancy">
+                        <h4>Card title (Fancy)</h4>
+                        <p>Card content</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Form</h3>
+                <p>A form component that can be used to collect user input.</p>
+                <form class="form">
+                    <fieldset class="fieldset">
+                      <legend class="legend">User Info</legend>
+                  
+                      <label for="name" class="label">Name</label>
+                      <input type="text" id="name" name="name" class="input" required autocomplete="name" />
+                  
+                      <label for="email" class="label">Email</label>
+                      <input type="email" id="email" name="email" class="input" required autocomplete="email" />
+                  
+                      <label for="password" class="label">Password</label>
+                      <input type="password" id="password" name="password" class="input" required minlength="6" autocomplete="new-password" />
+                  
+                      <label class="check">
+                        <input type="checkbox" onclick="document.getElementById('password').type = this.checked ? 'text' : 'password'" />
+                        Show Password
+                      </label>
+                  
+                      <label class="check">
+                        <input type="checkbox" id="remember" name="remember" />
+                        Remember Me
+                      </label>
+                  
+                      <button type="submit" class="primary">Submit</button>
+                      <button type="button" class="primary outline">Cancel</button>
+                    </fieldset>
+                </form>                  
+            </div>
+            <div class="grid-item">
+                <h3>Modal</h3>
+                <p>A modal component that can be used to display information.</p>
+                <button class="button primary" onclick="openModal()">Open modal</button>
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <div class="modal-header">
+                            <h4>Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal content Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam alias cum amet commodi, sed officiis, quidem, perferendis animi libero perspiciatis provident deleniti doloremque facere culpa? Eveniet qui illum reiciendis libero?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="modal-cta"class="button secondary" onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function openModal() {
+                        document.getElementById("modal").style.display = "flex";
+                    }
+
+                    function closeModal() {
+                        document.getElementById("modal").style.display = "none";
+                    }
+                </script>
+            </div>
+            <div class="grid-item">
+                <h3>Table</h3>
+                <p>A table component that can be used to display information.</p>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <th>Column A</th>
+                            <th>Column B</th>
+                            <th>Column C</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A1</td>
+                                <td>B1</td>
+                                <td>C1</td>
+                            </tr>
+                            <tr>
+                                <td>A2</td>
+                                <td>B2</td>
+                                <td>C2</td>
+                            </tr>
+                            <tr>
+                                <td>A3</td>
+                                <td>B3</td>
+                                <td>C3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="grid-item">
+                <h3>Typography</h3>
+                <p>A typography component that can be used to display information.</p>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <p>Paragraph</p>
+                <span>Span</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
