@@ -1,111 +1,60 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>DEXINER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEXINER</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-
-
-
-
-
-  <body class="clr-schemes">
-
-    <div class="panel">
-      <div class="active-scheme"></div>
-      <div class="schemes-container">
-        <ul class="schemes">
-        </ul>
-      </div>
+</head>
+<body>
+  <header><a href="#"><h1>DEXINER 1.0</h1></a></header>
+    <button id="togglePanel" class="btn primary-btn toggle-btn">Show Panel</button>
+    <div class="panel hidden">
+        <div class="active-scheme">Scheme: Default</div>
+        <div class="schemes-container">
+            <ul class="schemes"></ul>
+        </div>
+        <button id="saveScheme" class="btn secondary-btn">Save Scheme</button>
     </div>
-
-
-    <header>
-      <section class="header section">
-        <div class="brand-name">DEXINER</div>
-        <nav>
-          <div class="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-          <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </section>
-    </header>
-
-
-    <section class="hero section">
-      <div class="hero-content">
-        <h1>Hero Section</h1>
-        <p>This is our hero section</p>
-        <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-secondary">Secondary</button>
-      </div>
+    <div class="theme-toggle">
+      <span>Light mode</span>
+      <label class="switch">
+          <input type="checkbox" id="themeSwitch">
+          <span class="slider round"></span>
+      </label>
+      <span>Dark mode</span>
+    </div>
+    <section class="preview">
+      <div class="toggleLightDark">Toggle Light-Dark Scheme <span></span></div>
     </section>
-
-
-    <section id="pallete" class="pallete section">
-      <div class="clr" id="primary">
-        <div class="display"></div>
-        <div class="hex">#123456</div>
-      </div>
-      <div class="clr" id="secondary">
-        <div class="display"></div>
-        <div class="hex">#123456</div>
-      </div>
-      <div class="clr" id="accent">
-        <div class="display"></div>
-        <div class="hex">#123456</div>
-      </div>
-      <div class="clr" id="light">
-        <div class="display"></div>
-        <div class="hex">#123456</div>
-      </div>
-      <div class="clr" id="dark">
-        <div class="display"></div>
-        <div class="hex">#123456</div>
-      </div>
-
-      <!-- Color picker tool -->
-      <input type="color" id="colorPicker" style="display: none;">
-
-      
+    <section id="palette" class="palette section">
+        <div class="clr" id="primary">
+            <div class="display"></div>
+            <div class="hex">#123456</div>
+        </div>
+        <div class="clr" id="secondary">
+            <div class="display"></div>
+            <div class="hex">#123456</div>
+        </div>
+        <div class="clr" id="accent">
+            <div class="display"></div>
+            <div class="hex">#123456</div>
+        </div>
+        <div class="clr" id="light">
+            <div class="display"></div>
+            <div class="hex">#123456</div>
+        </div>
+        <div class="clr" id="dark">
+            <div class="display"></div>
+            <div class="hex">#123456</div>
+        </div>
+        <input type="color" id="colorPicker" style="display: none;">
     </section>
-
-
 
     <footer>
-      <section class="footer section">
-        <div class="left-column">
-          <div class="follow-icons">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-instagram-square"></i></a>
-          </div>
-          <form>
-            <input type="email" placeholder="Type your email...">
-            <button type="submit" class="btn-secondary">Subscribe</button>
-          </form>
-        </div>
-        <div class="mid-column">
-          <ul class="sitemap">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="right-column">
-          DEXINER &copy; 2024. All rights reserved.
-        </div>
-      </section>
+        <p>DEXINER &copy; 2024. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
