@@ -6,10 +6,12 @@
     <title>BMY Health Design System</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="light">
-    <div class="container header">
-        <h1>BMY Heath Design System</h1>
-        <button id="theme-button" onclick="(d=>d.dataset.theme=d.dataset.theme=='dark'?'light':'dark')(document.body)">Theme</button>
+<body data-theme="dark">
+
+    <div class="header">
+        <h1>BMY Heath</h1>
+        <subtitle>Design System</subtitle>
+        <button id="theme-button" onclick="(d=>d.dataset.theme=d.dataset.theme=='dark'?'light':'dark')(document.body)">Switch Theme</button>
     </div>
     <div class="palette">
         <div class="color primary"></div>
@@ -20,31 +22,32 @@
         <div class="color light"></div>
         <div class="color dark"></div>
     </div>
-    <div class="container">
+    <div class="main">
         <h2>Design System Components and Elements</h2>
         <div class="grid">
             <div class="grid-item">
                 <h3>Button</h3>
                 <p>A button component that can be used to trigger an action.</p>
-
-                <button>Default</button>
-                <button class="outline">Default</button>
-                <br>
-                <button class="primary">Primary</button>
-                <button class="primary outline">Primary</button>
-                <br>
-                <button class="secondary">Secondary</button>
-                <button class="secondary outline">Secondary</button>
-                <br>
-                <button class="accent">Accent</button>
-                <button class="accent outline">Accent</button>
-                <br>
-                <button class="gradient">Gradient</button>
-                <button class="gradient outline">Gradient</button>
-                <br>
-                <button class="disabled">Disabled</button>
-                <button class="disabled outline">Disabled</button>
-
+                <div class="wrapper flex">
+                    <button>Default</button>
+                    <button class="outline">Default</button>
+                    <br>
+                    <button class="primary">Primary</button>
+                    <button class="primary outline">Primary</button>
+                    <br>
+                    <button class="secondary">Secondary</button>
+                    <button class="secondary outline">Secondary</button>
+                    <br>
+                    <button class="accent">Accent</button>
+                    <button class="accent outline">Accent</button>
+                    <br>
+                    <button class="gradient">Gradient</button>
+                    <button class="gradient outline">Gradient</button>
+                    <br>
+                    <button class="disabled">Disabled</button>
+                    <button class="disabled outline">Disabled</button>
+                    
+                </div>
             </div>
             <div class="grid-item">
                 <h3>Card</h3>
@@ -55,7 +58,11 @@
                         <p>Card content</p>
                     </div>
                     <div class="card fancy">
-                        <h4>Card title (Fancy)</h4>
+                        <h4>Card title</h4>
+                        <p>Card content</p>
+                    </div>
+                    <div class="card solid">
+                        <h4>Card title</h4>
                         <p>Card content</p>
                     </div>
                 </div>
@@ -63,33 +70,153 @@
             <div class="grid-item">
                 <h3>Form</h3>
                 <p>A form component that can be used to collect user input.</p>
-                <form class="form">
-                    <fieldset class="fieldset">
-                      <legend class="legend">User Info</legend>
-                  
-                      <label for="name" class="label">Name</label>
-                      <input type="text" id="name" name="name" class="input" required autocomplete="name" />
-                  
-                      <label for="email" class="label">Email</label>
-                      <input type="email" id="email" name="email" class="input" required autocomplete="email" />
-                  
-                      <label for="password" class="label">Password</label>
-                      <input type="password" id="password" name="password" class="input" required minlength="6" autocomplete="new-password" />
-                  
-                      <label class="check">
-                        <input type="checkbox" onclick="document.getElementById('password').type = this.checked ? 'text' : 'password'" />
-                        Show Password
-                      </label>
-                  
-                      <label class="check">
-                        <input type="checkbox" id="remember" name="remember" />
-                        Remember Me
-                      </label>
-                  
-                      <button type="submit" class="primary">Submit</button>
-                      <button type="button" class="primary outline">Cancel</button>
-                    </fieldset>
-                </form>                  
+                <div class="wrapper row-responsive">
+                    <form class="form">
+                        <fieldset class="fieldset">
+                        <legend class="legend">User Info</legend>
+                    
+                        <label for="name" class="label">Name</label>
+                        <input type="text" id="name" name="name" class="input" required autocomplete="name" />
+                    
+                        <label for="email" class="label">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" class="input" required autocomplete="email" />
+                    
+                        <label for="password" class="label">Password</label>
+                        <input type="password" id="password" name="password" placeholder="********" class="input" required minlength="6" autocomplete="new-password" />
+                        <label class="input-option">
+                            <input type="checkbox" onclick="document.getElementById('password').type = this.checked ? 'text' : 'password'" />
+                            <span class="custom-checkbox"></span>
+                            Show Password
+                        </label>
+                        <label class="input-option">
+                            <input type="checkbox" id="remember" name="remember" />
+                            <span class="custom-checkbox"></span>
+                            Remember Me
+                        </label>
+                    
+                        <button type="submit" class="gradient">Submit</button>
+                        <button type="button" class="primary outline">Cancel</button>
+                        </fieldset>
+                    </form>
+                    <form class="proposal">
+                        <!--Form Title-->
+                        <div class="wrapper">
+                            <h4>Proposal Form</h4>
+                        </div>
+
+                        <!-- Section 1: Proposal Overview -->
+                        <fieldset class="fieldset">
+                            <legend class="legend">Section 1: Proposal Overview</legend>
+
+                            <label for="proposal-title" class="label">Proposal Title:</label>
+                            <input type="text" id="proposal-title" name="proposal-title" class="input" required>
+                        
+                            <label for="proposal-summary" class="label">Proposal Summary:</label>
+                            <textarea id="proposal-summary" name="proposal-summary" class="input" rows="5" required></textarea>
+                        </fieldset>
+
+                        <!-- Section 2: Research Questions -->
+                         <fieldset class="fieldset">
+                            <legend class="legend">Section 2: Research Questions</legend>
+
+                            <label for="research-question-1" class="label">Research Question 1:</label>
+                            <textarea id="research-question-1" name="research-question-1" class="input" rows="5" required></textarea>
+                        
+                            <label for="research-question-2" class="label">Research Question 2:</label>
+                            <textarea id="research-question-2" name="research-question-2" class="input" rows="5"></textarea>
+                         </fieldset>
+
+                        <!-- Section 3: Methodology -->
+                         <fieldset class="fieldset">
+                            <legend class="legend">Section 3: Methodology</legend>
+                            <div class="select">
+                                <label for="methodology" class="label">Methodology:</label>
+                                <select id="methodology" name="methodology" class="select">
+                                    <button class="select">
+                                        <selectedcontent></selectedcontent>
+                                    </button>
+                                    <option value="">Select Methodology</option>
+                                    <option value="qualitative">
+                                        <p class="icon">🐱</p>
+                                        <p class="option-label">Qualitative</p>
+                                    </option>
+                                    <option value="quantitative">
+                                        <p class="icon">📊</p>
+                                        <p class="option-label">Quantitative</p>
+                                    </option>
+                                    <option value="mixed-methods">
+                                        <p class="icon">📊</p>
+                                        <p class="option-label">Mixed-Methods</p>
+                                    </option>
+                                </select>
+                            </div>
+                         </fieldset>
+
+                        <!-- Section 4: Multiple Choice (Radio) -->
+                        <fieldset class="fieldset">
+                        <legend class="legend">Section 4: Multiple Choice Questions</legend>
+                        <div class="form-group">
+                            <p class="label">What is the primary goal of your research?</p>
+                            <label class="input-option">
+                            <input type="radio" name="goal" value="explore" />
+                            <span class="custom-radio"></span>
+                            To explore a new research area
+                            </label>
+                            <label class="input-option">
+                            <input type="radio" name="goal" value="test" />
+                            <span class="custom-radio"></span>
+                            To test a hypothesis
+                            </label>
+                            <label class="input-option">
+                            <input type="radio" name="goal" value="evaluate" />
+                            <span class="custom-radio"></span>
+                            To evaluate a program or policy
+                            </label>
+                        </div>
+                        </fieldset>
+
+                        <!-- Section 5: Checkboxes -->
+                        <fieldset class="fieldset">
+                        <legend class="legend">Section 5: Resources</legend>
+                        <div class="form-group">
+                            <p class="label">Which of the following resources will you need?</p>
+                            <label class="input-option">
+                            <input type="checkbox" name="resource" value="database" />
+                            <span class="custom-checkbox"></span>
+                            Access to a database
+                            </label>
+                            <label class="input-option">
+                            <input type="checkbox" name="resource" value="lab" />
+                            <span class="custom-checkbox"></span>
+                            Use of a laboratory
+                            </label>
+                            <label class="input-option">
+                            <input type="checkbox" name="resource" value="partner" />
+                            <span class="custom-checkbox"></span>
+                            Collaboration with a research partner
+                            </label>
+                        </div>
+                        </fieldset>
+
+                        <!-- Section 6: Long Answer -->
+                        <fieldset class="fieldset">
+                        <legend class="legend">Section 6: Methodology</legend>
+                        <label for="long-answer" class="label">Describe your research methodology:</label>
+                        <textarea id="long-answer" name="methodology" class="textarea" rows="8" required></textarea>
+                        </fieldset>
+
+                        <!-- Section 7: File Upload -->
+                        <fieldset class="fieldset">
+                            <legend class="legend">Section 7: File Upload</legend>
+                            <label for="file-upload" class="label custom-file-upload">Upload Files</label>
+                            <input type="file" id="file-upload" name="file-upload" class="input">
+                        </fieldset>
+
+                        <!-- Section 8: Submit and Cancel Buttons -->
+                        <button type="submit" class="gradient">Submit</button>
+                        <button type="button" class="primary outline">Cancel</button>
+                    </form>
+                </div>                  
             </div>
             <div class="grid-item">
                 <h3>Modal</h3>
@@ -129,22 +256,74 @@
                             <th>Column A</th>
                             <th>Column B</th>
                             <th>Column C</th>
+                            <th>Column D</th>
+                            <th>Column E</th>
+                            <th>Column F</th>
+                            <th>Column G</th>
+                            <th>Column H</th>
+                            <th>Column I</th>
+                            <th>Column J</th>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>A1</td>
                                 <td>B1</td>
                                 <td>C1</td>
+                                <td>D1</td>
+                                <td>E1</td>
+                                <td>F1</td>
+                                <td>G1</td>
+                                <td>H1</td>
+                                <td>I1</td>
+                                <td>J1</td>
                             </tr>
                             <tr>
                                 <td>A2</td>
                                 <td>B2</td>
                                 <td>C2</td>
+                                <td>D2</td>
+                                <td>E2</td>
+                                <td>F2</td>
+                                <td>G2</td>
+                                <td>H2</td>
+                                <td>I2</td>
+                                <td>J2</td>
                             </tr>
                             <tr>
                                 <td>A3</td>
                                 <td>B3</td>
                                 <td>C3</td>
+                                <td>D3</td>
+                                <td>E3</td>
+                                <td>F3</td>
+                                <td>G3</td>
+                                <td>H3</td>
+                                <td>I3</td>
+                                <td>J3</td>
+                            </tr>
+                            <tr>
+                                <td>A4</td>
+                                <td>B4</td>
+                                <td>C4</td>
+                                <td>D4</td>
+                                <td>E4</td>
+                                <td>F4</td>
+                                <td>G4</td>
+                                <td>H4</td>
+                                <td>I4</td>
+                                <td>J4</td>
+                            </tr>
+                            <tr>
+                                <td>A5</td>
+                                <td>B5</td>
+                                <td>C5</td>
+                                <td>D5</td>
+                                <td>E5</td>
+                                <td>F5</td>
+                                <td>G5</td>
+                                <td>H5</td>
+                                <td>I5</td>
+                                <td>J5</td>
                             </tr>
                         </tbody>
                     </table>
@@ -163,6 +342,7 @@
                 <span>Span</span>
             </div>
         </div>
+
     </div>
 </body>
-</html>
+    </html>
