@@ -5,7 +5,7 @@ let loaded = new Map();
 
 async function renderLayout() {
   const role = State.get('role') || 'default';
-  const config = await fetch('/json/config.json').then(r => r.json());
+  const config = await fetch('./json/config.json').then(r => r.json());
   const roleConfig = config[role] || config.default;
 
   // Clear all previously loaded components
@@ -54,3 +54,4 @@ export {
 };
 
 export default renderLayout;
+
