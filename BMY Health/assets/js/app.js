@@ -17,7 +17,7 @@ export async function initApp(role = 'admin') {
 
   // 🔹 Try to load config.json (silent fail if missing)
   try {
-    const res = await fetch('/json/config.json');
+    const res = await fetch('./json/config.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const config = await res.json();
     State.set('config', config);
@@ -49,4 +49,5 @@ export async function initApp(role = 'admin') {
   ui.init(role);
   log.success(`App initialized for role: ${role}, route: ${State.get('route')}`);
 }
+
 
