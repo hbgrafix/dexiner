@@ -1,0 +1,5 @@
+{
+  "default": ["header","sidebar","main","footer", "modal", "form"],
+  "guest":   ["header","main","footer", "modal", "form"],
+  "admin":   ["header","sidebar","main","footer", "modal", "form", "table"]
+}

@@ -1,0 +1,21 @@
+
+{
+    "title": "Untitled Form",
+    "description": "Optional form description",
+    "sections": [
+        {
+            "title": "Section Title",
+            "description": "Optional form description",
+            "questions": [
+                {
+                    "id": "q1",
+                    "type": "text",
+                    "label": "Question label",
+                    "name": "question_name",
+                    "required": false,
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

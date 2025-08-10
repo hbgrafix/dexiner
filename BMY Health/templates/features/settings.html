@@ -1,0 +1,77 @@
+
+
+<section class="settings" id="settingsComponent">
+    <h3>Settings</h3>
+    <form id="settings-form" class="form user-form" style="min-width: 300px;">
+         <!-- Section 5: Checkboxes -->
+        <fieldset class="fieldset">
+          <legend class="legend"></legend>
+          <div class="form-group">
+              <label class="input-option">
+                Email notifications:
+                <input type="checkbox" name="notifications" value="notifications" />
+                <span class="custom-checkbox"></span>
+              </label>
+          </div>
+          <div class="select">
+              <label for="theme" class="label">Theme:</label>
+              <select id="theme" name="theme" class="select">
+                  <button class="select">
+                      <selectedcontent></selectedcontent>
+                  </button>
+                  <option value="" style="display: none">Select Theme</option>
+                  <option value="light">
+                      <p class="option-label">Light</p>
+                  </option>
+                  <option value="dark">
+                      <p class="option-label">Dark</p>
+                  </option>
+              </select>
+          </div>
+        </fieldset>
+      <button type="submit">Save Settings</button>
+    </form>
+    <div id="settings-status" role="status"></div>
+</section>
+  
+<script>
+  // Theme switcher, selected content is a custom element and reflects the data-theme attribute
+  (function bindThemeSwitcher() {
+    const theme = document.body.getAttribute('data-theme') || 'light';
+    const themeSwitcher = document.getElementById('theme');
+
+    // Make sure the select shows the current theme
+    if (themeSwitcher) {
+      const options = [...themeSwitcher.options];
+      const match = options.find(opt => opt.value === theme);
+      if (match) {
+        match.selected = true;
+      }
+
+      themeSwitcher.addEventListener('change', e => {
+        document.body.setAttribute('data-theme', e.target.value);
+      });
+    }
+  })();
+    // Simple form handler to mock-save settings
+    (function bindSettingsForm() {
+      const form = document.getElementById('settings-form');
+      const status = document.getElementById('settings-status');
+      form?.addEventListener('submit', e => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const settings = Object.fromEntries(data.entries());
+        // Mock save delay
+        status.textContent = 'Saving...';
+        setTimeout(() => {
+          // emitt the signal "updateUser" with the new settings object and new timestamp logging in the console "signal emitted", so the main js can update the UI and cache
+          window.dispatchEvent(new CustomEvent('updateUser', { detail: { settings, timestamp: Date.now() } }));
+          // debug new settings object
+          console.log(settings);
+          // show success message
+          status.textContent = 'Settings saved successfully!';
+        }, 400);
+      });
+    })();
+</script>
+  

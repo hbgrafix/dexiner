@@ -1,0 +1,5 @@
+{
+    "default": [],
+    "guest":   [],
+    "admin":   ["users_list", "add_user"]
+}

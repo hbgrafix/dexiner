@@ -1,0 +1,69 @@
+<div class="modal" id="addUserForm">
+    <div class="modal-content">
+        <div id="add-user-form" style="display: none;">
+            <form style="display: flex; flex-direction: column;">
+                <label>
+                    Username:
+                    <input type="text" name="username" />
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" />
+                </label>
+                <label>
+                    Role:
+                    <select name="role">
+                        <option value="admin">Admin</option>
+                        <option value="default">Default</option>
+                    </select>
+                </label>
+                <div style="display: flex; justify-content: flex-end;">
+                    <button type="submit">Add User</button>
+                    <button id="cancel_add_user" class="outline">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>  
+    // Add event listeners for form submission
+    const addUserForm = document.getElementById('add-user-form');
+
+    addUserForm.querySelector('#cancel_add_user').addEventListener('click', () => {
+      addUserForm.style.display = 'none';
+      addUserBtn.style.display = 'block';
+      addUserForm.querySelector('form').reset();
+    });
+
+    
+    addUserForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(addUserForm.querySelector('form'));
+      const newUser = {
+        id: users.length + 1,
+        username: formData.get('username'),
+        email: formData.get('email'),
+        role: formData.get('role'),
+      };
+      // Add new user to the list
+      users.push(newUser);
+      // Update the user list
+      const userList = document.getElementById('user-list');
+      userList.innerHTML = '';
+      users.forEach(user => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${user.id}</td>
+          <td>${user.username}</td>
+          <td>${user.email}</td>
+          <td>${user.role}</td>
+          <td>
+            <button class="primary outline">Edit</button>
+            <button class="outline">Delete</button>
+          </td>
+        `;
+        userList.appendChild(row);
+      });
+    });
+</script>

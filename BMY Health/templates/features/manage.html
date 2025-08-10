@@ -1,0 +1,12 @@
+<!-- /templates/components/shared/manage.html -->
+<section class="manage" id="manageComponent">
+    <h3>Manage Users</h3>
+    <!-- This is the injection slot for user related stuff like user lists etc -->
+</section>
+  
+<script>
+    function initManage() {
+        // trigger "loadUtilities" event on load with list of utilities to be loaded and slot id
+        window.dispatchEvent(new CustomEvent('loadUtilities', { detail: { utilities: ['users_list'], slotId: 'manageComponent' } }));
+    }
+</script>

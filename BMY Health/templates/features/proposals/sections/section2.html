@@ -1,0 +1,76 @@
+<section class="proposal-section" id="proposalSection2">
+  <!-- Section: Scientific Review (Synopsis Part) -->
+  <fieldset class="fieldset" id ="scientific-review">
+    <label for="supervisor-first" class="label">Research Supervisor/Principal Investigator:</label>
+    <div class="flex-input">
+        <input type="text" id="supervisor-first" name="supervisor-first" class="input" placeholder="First Name">
+        <input type="text" id="supervisor-last" name="supervisor-last" class="input" placeholder="Last Name">
+    </div>
+
+    <legend class="legend">Scientific Review (Synopsis Part)</legend>
+    <label for="applicant-first" class="label">Name of Applicant:</label>
+    <div class="flex-input">
+        <input type="text" id="applicant-first" name="applicant-first" class="input" placeholder="First Name" required>
+        <input type="text" id="applicant-last" name="applicant-last" class="input" placeholder="Last Name" required>
+    </div>
+
+    <label for="title-of-research" class="label">Title of Research:</label>
+    <input type="text" id="title-of-research" name="title-of-research" class="input" required>
+
+    <label for="start-date" class="label">Start Date of Data Collection:</label>
+    <input type="date" id="start-date" name="start-date" class="input">
+    <label for="end-date" class="label">End Date of Data Collection:</label>
+    <input type="date" id="end-date" name="end-date" class="input">
+
+    <label for="introduction" class="label">Introduce the topic and inform about magnitude of problem which you want to solve through this research. Add literature review and discuss what information remained missing in other researches that you will cover in your project/ Research Gap. Explain the rationale/ intended value of covering this research gap:</label>
+    <textarea id="introduction" name="introduction" class="input" rows="5" required></textarea>
+
+    <label for="objectives" class="label">Objectives of Research:</label>
+    <input type="text" id="objectives" name="objectives" class="input" required>
+
+    <label for="main-variable" class="label">Main Variable Under Study:</label>
+    <input type="text" id="main-variable" name="main-variable" class="input" required>
+
+    <label for="operational-definition" class="label">Operational Definition of Variable:</label>
+    <textarea id="operational-definition" name="operational-definition" class="input" rows="5" required></textarea>
+
+    <label for="study-design" class="label">Study Design:</label>
+    <textarea id="study-design" name="study-design" class="input" rows="5" required></textarea>
+
+    <label for="sample-size" class="label">Sample Size and Sampling Technique:</label>
+    <textarea id="sample-size" name="sample-size" class="input" rows="5" required></textarea>
+
+    <label for="sample-selection" class="label">Sample Selection (Inclusion/Exclusion Criteria):</label>
+    <textarea id="sample-selection" name="sample-selection" class="input" rows="5"></textarea>
+
+    <label for="collection-procedures" class="label">Data Collection Procedures and Tools:</label>
+    <textarea id="collection-procedures" name="collection-procedures" class="input" rows="5" required></textarea>
+
+    <label for="proforma-upload" class="label custom-file-upload">Upload Questionnaire/Proforma:</label>
+    <input type="file" id="proforma-upload" name="proforma-upload" class="input" required>
+
+    <label for="form-link" class="label">Google Form / Online Questionnaire Link:</label>
+    <input type="url" id="form-link" name="form-link" class="input">
+
+    
+    <label for="analysis-plan" class="label">Data Analysis Plan:</label>
+    <textarea id="analysis-plan" name="analysis-plan" class="input" rows="5"></textarea>
+
+    <p class="label">Select all methods for enhancing validity:</p>
+    <label class="input-option">
+      <input type="checkbox" name="validity[]" value="participant-feedback">
+      <span class="custom-checkbox"></span>
+      Included Patient/Participant Feedback on research design and choice of variables for context validity
+    </label>
+    <label class="input-option">
+      <input type="checkbox" name="validity[]" value="subject-specialist">
+      <span class="custom-checkbox"></span>
+      Taken opinion of subject specialist on research tools for content validity
+    </label>
+    <label class="input-option">
+      <input type="checkbox" name="validity[]" value="community-rep">
+      <span class="custom-checkbox"></span>
+      Consultation from community representatives for cultural validity
+    </label>
+  </fieldset>
+</section>

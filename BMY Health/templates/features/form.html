@@ -1,0 +1,27 @@
+<form class="form user-form">
+    <fieldset class="fieldset">
+    <legend class="legend">User Form</legend>
+
+    <label for="name" class="label">Name</label>
+    <input type="text" id="name" name="name" class="input" required autocomplete="name" />
+
+    <label for="email" class="label">Email</label>
+    <input type="email" id="email" name="email" placeholder="example@mail.com" class="input" required autocomplete="email" />
+
+    <label for="password" class="label">Password</label>
+    <input type="password" id="password" name="password" placeholder="********" class="input" required minlength="6" autocomplete="new-password" />
+    <label class="input-option">
+        <input type="checkbox" onclick="document.getElementById('password').type = this.checked ? 'text' : 'password'" />
+        <span class="custom-checkbox"></span>
+        Show Password
+    </label>
+    <label class="input-option">
+        <input type="checkbox" id="remember" name="remember" />
+        <span class="custom-checkbox"></span>
+        Remember Me
+    </label>
+
+    <button type="submit" class="gradient">Submit</button>
+    <button type="button" class="primary outline">Cancel</button>
+    </fieldset>
+</form>

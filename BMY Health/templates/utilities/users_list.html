@@ -1,0 +1,122 @@
+<div id="util-users-list">
+  <div style="display: flex; justify-content: space-between;">
+    <h4>Users</h4>
+    <button id="add-user-btn">Add New</button>
+  </div>
+  <hr>
+  <div class="table-container">
+    <table>
+      <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="user-list">
+            <!-- User list will be populated here -->
+        </tbody>
+    </table>
+  </div>
+  <div class="card" id="addUserForm" style="display: none;">
+    <div class="panel-content">
+      <span class="close">&times;</span>
+        <div id="add-user-form">
+          <form style="display: flex; flex-direction: column;">
+              <label>
+                  Username:
+                  <input type="text" name="username" />
+              </label>
+              <label>
+                  Email:
+                  <input type="email" name="email" />
+              </label>
+              <label>
+                  Role:
+                  <select name="role">
+                      <option value="admin">Admin</option>
+                      <option value="default">Default</option>
+                  </select>
+              </label>
+              <div style="display: flex; justify-content: flex-end;">
+                  <button type="submit">Add User</button>
+              </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<style>
+
+</style>
+<script>
+    const actions = `<div class='actions'>
+            <button class="button primary box" title="Edit">✎</button>
+            <button class="button outline box" title="Delete">✖</button>
+            </div>`;
+    let users = [];
+    // Load dynamic data from users.json
+    fetch('/json/users.json')
+      .then(response => response.json())
+      .then(data => {
+        const users = data;
+        const userList = document.getElementById('user-list');
+        users.forEach(user => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${user.id}</td>
+            <td>${user.username}</td>
+            <td>${user.email}</td>
+            <td>${user.role}</td>
+            <td>${actions}</td>
+          `;
+          userList.appendChild(row);
+        });
+      })
+    .catch(error => console.error('Error loading data:', error));
+  
+    // Add event listeners for add user button and form submission
+    const addUserForm = document.getElementById('addUserForm');
+    const addUserBtn = document.getElementById('add-user-btn');
+    addUserBtn.addEventListener('click', () => {
+      addUserForm.style.display = 'block';
+      addUserForm.querySelector('form').reset();
+      addUserBtn.style.display = 'none';
+    });
+
+    addUserForm.querySelector('.close').addEventListener('click', () => {
+      addUserForm.style.display = 'none';
+      addUserBtn.style.display = 'block';
+      addUserForm.querySelector('form').reset();
+    });
+
+    
+    addUserForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(addUserForm.querySelector('form'));
+      const newUser = {
+        id: users.length + 1,
+        username: formData.get('username'),
+        email: formData.get('email'),
+        role: formData.get('role'),
+      };
+      // Add new user to the list
+      users.push(newUser);
+      // Update the user list
+      const userList = document.getElementById('user-list');
+      userList.innerHTML = '';
+      users.forEach(user => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${user.id}</td>
+          <td>${user.username}</td>
+          <td>${user.email}</td>
+          <td>${user.role}</td>
+          <td>${actions}</td>
+        `;
+        userList.appendChild(row);
+      });
+    });
+</script>

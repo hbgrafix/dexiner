@@ -1,0 +1,6 @@
+{
+    "default": ["dashboard", "profile","settings"],
+    "guest":   [],
+    "admin":   ["dashboard", "profile", "settings", "manage", "proposal", "proposal2"]
+}
+  

@@ -1,0 +1,23 @@
+<!-- /templates/components/ui/modal.html -->
+<div class="modal" id="infoModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-header">
+            <h4>Request Access</h4>
+        </div>
+        <div class="modal-body">
+            <p>Please confirm that you want to proceed!</p>
+        </div>
+        <div class="modal-footer">
+            <button id="modal-cta"class="button primary">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // a temporary function that handles the "role" attribute on the body element upon click of #modal-cta
+document.getElementById("modal-cta")?.addEventListener("click", () => {
+  window.setRole("default");
+  // cache the new role, so that when the page is reloaded, the state.role is restored from cache instead of the body attribute
+});
+</script>

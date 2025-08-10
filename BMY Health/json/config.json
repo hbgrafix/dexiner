@@ -1,0 +1,17 @@
+{
+  "guest": {
+    "components": ["header", "main", "footer"],
+    "features": ["guest"],
+    "utilities": []
+  },
+  "admin": {
+    "components": ["header", "sidebar", "main", "footer"],
+    "features": ["dashboard", "profile", "settings", "manage", "proposals/proposal", "proposals/proposal1", "proposals/proposal2", "proposals/proposal3", "form", "table"],
+    "utilities": ["users_list", "add_user"]
+  },
+  "default": {
+    "components": ["header", "sidebar", "main", "footer"],
+    "features": ["dashboard", "proposals/proposal", "proposals/proposal1", "proposals/proposal2", "proposals/proposal3", "profile", "settings", "form"],
+    "utilities": []
+  }
+}

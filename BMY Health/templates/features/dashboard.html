@@ -1,0 +1,34 @@
+<section class="dashboard" id="dashboardComponent">
+    <h3>Dashboard</h3>
+    <p>Welcome, <span id="dashboard-user"></span>!</p>
+    <div class="stats row-responsive">
+      <div class="stat card solid">
+        <strong>42</strong>
+        <span>Active Users</span>
+      </div>
+      <div class="stat card fancy">
+        <strong>128</strong>
+        <span>New Sign-ups</span>
+      </div>
+      <div class="stat card">
+        <strong>7</strong>
+        <span>Open Tickets</span>
+      </div>
+    </div>
+</section>
+  
+<script>
+    // Self-initialize user name into dashboard
+    (function fillDashboardUser() {
+      const user = document.body.dataset.user || 'Guest';
+      const el = document.getElementById('dashboard-user');
+      // add event listener to update user
+      window.addEventListener('updateUser', (event) => {
+        const { settings } = event.detail;
+        const newUsername = settings.username;
+        el.textContent = newUsername;
+      })
+      if (el) el.textContent = user;
+    })();
+</script>
+  

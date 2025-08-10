@@ -1,0 +1,968 @@
+<form class="proposal">
+
+<!--Form Title-->
+<div class="wrapper">
+    <h4>Proposal Form Expedited</h4>
+</div>
+
+<section>
+  <!-- Section: Contact Information -->
+  <fieldset class="fieldset" id="contact-info">
+    <legend class="legend">Contact Information</legend>
+    <label for="email" class="label">Email:</label>
+    <input type="email" id="email" name="email" class="input" required>
+
+    <p class="label">Your research topic fulfills which of these citeria?</p>
+    <label class="input-option">
+      <input type="checkbox" id="feasibility" name="criteria[]" value="participant-feedback">
+      <span class="custom-checkbox"></span>
+      Feasible (have manpower, budget, time for data collection and writing)
+    </label>
+    <label class="input-option">
+      <input type="checkbox" id="timing" name="criteria[]" value="subject-specialist">
+      <span class="custom-checkbox"></span>
+      Addressing research question on right time as community/ decision makers are looking for the answers
+    </label>
+
+    <label for="beneficiary-group" class="label">Name the beneficiary group clearly identified that will benefit from the information generated in your research:</label>
+    <input type="text" id="beneficiary-group" name="beneficiary-group" class="input">
+  </fieldset>
+</section>
+
+<section>
+  <!-- Section: Scientific Review (Synopsis Part) -->
+  <fieldset class="fieldset" id ="scientific-review">
+    <label for="supervisor-first" class="label">Research Supervisor/Principal Investigator:</label>
+    <div class="flex-input">
+        <input type="text" id="supervisor-first" name="supervisor-first" class="input" placeholder="First Name">
+        <input type="text" id="supervisor-last" name="supervisor-last" class="input" placeholder="Last Name">
+    </div>
+
+    <legend class="legend">Scientific Review (Synopsis Part)</legend>
+    <label for="applicant-first" class="label">Name of Applicant:</label>
+    <div class="flex-input">
+        <input type="text" id="applicant-first" name="applicant-first" class="input" placeholder="First Name" required>
+        <input type="text" id="applicant-last" name="applicant-last" class="input" placeholder="Last Name" required>
+    </div>
+
+    <label for="title-of-research" class="label">Title of Research:</label>
+    <input type="text" id="title-of-research" name="title-of-research" class="input" required>
+
+    <label for="start-date" class="label">Start Date of Data Collection:</label>
+    <input type="date" id="start-date" name="start-date" class="input">
+    <label for="end-date" class="label">End Date of Data Collection:</label>
+    <input type="date" id="end-date" name="end-date" class="input">
+
+    <label for="introduction" class="label">Introduce the topic and inform about magnitude of problem which you want to solve through this research. Add literature review and discuss what information remained missing in other researches that you will cover in your project/ Research Gap. Explain the rationale/ intended value of covering this research gap:</label>
+    <textarea id="introduction" name="introduction" class="input" rows="5" required></textarea>
+
+    <label for="objectives" class="label">Objectives of Research:</label>
+    <input type="text" id="objectives" name="objectives" class="input" required>
+
+    <label for="main-variable" class="label">Main Variable Under Study:</label>
+    <input type="text" id="main-variable" name="main-variable" class="input" required>
+
+    <label for="operational-definition" class="label">Operational Definition of Variable:</label>
+    <textarea id="operational-definition" name="operational-definition" class="input" rows="5" required></textarea>
+
+    <label for="study-design" class="label">Study Design:</label>
+    <textarea id="study-design" name="study-design" class="input" rows="5" required></textarea>
+
+    <label for="sample-size" class="label">Sample Size and Sampling Technique:</label>
+    <textarea id="sample-size" name="sample-size" class="input" rows="5" required></textarea>
+
+    <label for="sample-selection" class="label">Sample Selection (Inclusion/Exclusion Criteria):</label>
+    <textarea id="sample-selection" name="sample-selection" class="input" rows="5"></textarea>
+
+    <label for="collection-procedures" class="label">Data Collection Procedures and Tools:</label>
+    <textarea id="collection-procedures" name="collection-procedures" class="input" rows="5" required></textarea>
+
+    <label for="proforma-upload" class="label custom-file-upload">Upload Questionnaire/Proforma:</label>
+    <input type="file" id="proforma-upload" name="proforma-upload" class="input" required>
+
+    <label for="form-link" class="label">Google Form / Online Questionnaire Link:</label>
+    <input type="url" id="form-link" name="form-link" class="input">
+
+    
+    <label for="analysis-plan" class="label">Data Analysis Plan:</label>
+    <textarea id="analysis-plan" name="analysis-plan" class="input" rows="5"></textarea>
+
+    <p class="label">Select all methods for enhancing validity:</p>
+    <label class="input-option">
+      <input type="checkbox" name="validity[]" value="participant-feedback">
+      <span class="custom-checkbox"></span>
+      Included Patient/Participant Feedback on research design and choice of variables for context validity
+    </label>
+    <label class="input-option">
+      <input type="checkbox" name="validity[]" value="subject-specialist">
+      <span class="custom-checkbox"></span>
+      Taken opinion of subject specialist on research tools for content validity
+    </label>
+    <label class="input-option">
+      <input type="checkbox" name="validity[]" value="community-rep">
+      <span class="custom-checkbox"></span>
+      Consultation from community representatives for cultural validity
+    </label>
+  </fieldset>
+</section>
+
+<section>
+  <!-- Section: Ethical Review (placeholder for matrix logic) -->
+  <fieldset class="fieldset" id="ethical-review">
+    <legend class="legend">Ethical Review</legend>
+    <div class="set">
+        <p class="label">Ethical consideration in risk exposure for participants:</p>
+        <!-- Add matrix logic here (7 questions with 3 choices each, to choose a single option from - input type radio) -->
+        <div class="input-matrix" id="consideration-risk-exposure" data-options="3">
+            <div class="form-group header-row">
+                <p class="label"></p> <!-- empty cell to align with label column -->
+                <div class="input-option">Yes</div>
+                <div class="input-option">No</div>
+                <div class="input-option">N/A</div>
+            </div>
+            <div class="form-group" id="risk1" data-risk-factor = "1">
+                <p class="label">What is the primary goal of your research?</p>
+                <label class="input-option">
+                    <input type="radio" name="risk1" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk1" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk1" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk2" data-risk-factor = "1">
+                <p class="label">Is there any risk of emotional disturbance of participant with any sensitive question in your performa?</p>
+                <label class="input-option">
+                    <input type="radio" name="risk2" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk2" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk2" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk3" data-risk-factor = "1">
+                <p class="label">Is there any risk of breech in privacy (e.g. subject's names, initials, or hospital numbers, pictures going to be published in manuscript) without informed consent?</p>
+                <label class="input-option">
+                    <input type="radio" name="risk3" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk3" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk3" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk4" data-risk-factor = "1">
+                <p class="label">Is there any risk of social stigma for the community (such as high prevalence of a disease with stigma) if data is published with name of that community (geographical/religious/ethnic group etc.)?</p>
+                <label class="input-option">
+                    <input type="radio" name="risk4" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk4" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk4" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk5" data-risk-factor = "1">
+                <p class="label">Is there any economic risk /effect on career (such as employee feedback/medical diagnosis as unfit for job) for participant if data is disclosed outside research team?</p>
+                <label class="input-option">
+                    <input type="radio" name="risk5" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk5" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk5" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk6" data-risk-factor = "1">
+                <p class="label">Is there any chance of disclosure requirements for participants data? For example, research on child abuse that need legal action and reporting, OR research on reportable communicable disease that need reporting to public health authorities OR disclosing personal info to research sponsors (pharma company) or other regulatory agencies/community partners where needed.</p>
+                <label class="input-option">
+                    <input type="radio" name="risk6" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk6" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk6" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk7" data-risk-factor = "0">
+                <p class="label">Are any of the above risk to participants more than what they experience in everyday life?</p>
+                <label class="input-option">
+                    <input type="radio" name="risk7" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk7" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk7" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- input with no poitner events to reflect number of risks with "Yes" -->
+        <div>
+            <label for="num_risks" class="label">Risk added</label>
+            <input type="text" name="num_risks" id="num_risks" class="input" value="0" disabled/>
+        </div>
+
+        <!-- conditional input that appears if certain risks are selected "Yes" or may be the num_risk (sum of data-risk-factor) is non zero -->
+        <div class="form-group" id="informed-consent" data-condition = "num_risks">
+            <p class="label">In case of any such risk, is the participant informed about risks in detail at the time of informed consent?</p>
+            <label class="input-option">
+            <input type="radio" name="informed-consent" value="yes" checked/>
+            <span class="custom-radio"></span>
+            Yes
+            </label>
+            <label class="input-option">
+            <input type="radio" name="informed-consent" value="no" />
+            <span class="custom-radio"></span>
+            No
+            </label>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <p class="label">Other Ethical consideration in informed consent:</p>
+        <!-- Add matrix logic here (7 questions with 3 choices each, to choose a single option from - input type radio) -->
+        <div class="input-matrix" id="consideration-informed-consent" data-options="3">
+            <div class="form-group header-row">
+                <p class="label"></p> <!-- empty cell to align with label column -->
+                <div class="input-option">Yes</div>
+                <div class="input-option">No</div>
+                <div class="input-option">N/A</div>
+            </div>
+            <div class="form-group" id="consideration1">
+                <p class="label">Is there a power differential between researchers and paricipants (researchers in a position of authority/influencing decisions of participants care where they may readily give consent for data collection)?</p>
+                <label class="input-option">
+                    <input type="radio" name="consideration1" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="consideration1" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="consideration1" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="consideration2">
+                <p class="label">With questionnaires, will you give participants the option of omitting questions they don't want to answer?</p>
+                <label class="input-option">
+                    <input type="radio" name="consideration2" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="consideration2" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="consideration2" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="consideration3">
+                <p class="label">Will you tell the participants that their data will be treated with foll confidentiality and if published, it will not be identifiable as theirs?</p>
+                <label class="input-option">
+                    <input type="radio" name="consideration3" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="consideration3" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="consideration3" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <p class="label">Ethical consideration in subject selection: Does your study participants include any of the following groups?</p>
+        <div class="input-matrix" id="consideration-subject-group" data-options="2">
+            <div class="form-group header-row">
+                <p class="label"></p> <!-- empty cell to align with label column -->
+                <div class="input-option">Yes</div>
+                <div class="input-option">No</div>
+            </div>
+            <div class="form-group" id="group1">
+                <p class="label">People with impaired decision making capacity</p>
+                <label class="input-option">
+                    <input type="radio" name="group1" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="group1" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="form-group" id="group2">
+                <p class="label">Children under 16</p>
+                <label class="input-option">
+                    <input type="radio" name="group2" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="group2" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="form-group" id="group3">
+                <p class="label">Medically vulnerable</p>
+                <label class="input-option">
+                    <input type="radio" name="group3" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="group3" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="form-group" id="group4">
+                <p class="label">Prisoners</p>
+                <label class="input-option">
+                    <input type="radio" name="group4" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="group4" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="form-group" id="group5">
+                <p class="label">Economically or educationally disadvantaged</p>
+                <label class="input-option">
+                    <input type="radio" name="group5" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="group5" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="form-group" id="group6">
+                <p class="label">Racial or ethical minorities</p>
+                <label class="input-option">
+                    <input type="radio" name="group6" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="group6" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="form-group" id="group7">
+                <p class="label">Institutionalized persons (correctional facilities, nursing homes, or mental health)</p>
+                <label class="input-option">
+                    <input type="radio" name="group7" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="group7" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Conditional fields -->
+    </div>
+
+
+    <div class="set">
+        <p class="label">If you have included these special groups in your study:</p>
+        <div class="input-matrix" id="consideration-special-group" data-options="2">
+            <div class="form-group header-row">
+                <p class="label"></p> <!-- empty cell to align with label column -->
+                <div class="input-option">Yes</div>
+                <div class="input-option">No</div>
+            </div>
+            <div class="form-group" id="special-group-1">
+                <p class="label">Are youy considering special care for taking informed consent, reducing the risk of coercion?</p>
+                <label class="input-option">
+                    <input type="radio" name="special-group-1" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="special-group-1" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+            <div class="form-group" id="special-group-2">
+                <p class="label">Are the Risks to these participants (as mentioned in first table) less or at least not more than daily life risk?</p>
+                <label class="input-option">
+                    <input type="radio" name="special-group-2" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="special-group-2" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <div class="form-group" id="consideration-exclusive-group">
+            <p class="label">Is the research excluding groups such as elderly, women, pregnant, language barrier from research without scientific evidence of these groups being at risk in given scenario of your research?</p>
+            <label class="input-option">
+            <input type="radio" name="exclusive-group" value="yes" checked/>
+            <span class="custom-radio"></span>
+            Yes
+            </label>
+            <label class="input-option">
+            <input type="radio" name="exclusive-group" value="no" />
+            <span class="custom-radio"></span>
+            No
+            </label>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <p class="label">Any Risk to researchers?</p>
+        <!-- Add matrix logic here (7 questions with 3 choices each, to choose a single option from - input type radio) -->
+        <div class="input-matrix" id="consideration-researcher-risk" data-options="3">
+            <div class="form-group header-row">
+                <p class="label"></p> <!-- empty cell to align with label column -->
+                <div class="input-option">Yes</div>
+                <div class="input-option">No</div>
+                <div class="input-option">N/A</div>
+            </div>
+            <div class="form-group" id="researcher-risk1">
+                <p class="label">Qualitative reseacrh on Sensitive topics which may disturb young/vulnerable/female data collectors without provision of conunselling and training</p>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk1" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="researcher-risk1" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk1" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="researcher-risk2">
+                <p class="label">Contact with harmful agents or risk of physical injury</p>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk2" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="researcher-risk2" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk2" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="researcher-risk3">
+                <p class="label">Contact with infectious patients and risk to health</p>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk3" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="researcher-risk3" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk3" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="researcher-risk4">
+                <p class="label">Travelling in unsafe area and risk of accidents/violence</p>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk4" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="researcher-risk4" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk4" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="researcher-risk5">
+                <p class="label">Risk of facing improper behaviour by approaching some risky community (drug abusers/ mentally challenged/ persons involved in risky behaviors)</p>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk5" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="researcher-risk5" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk5" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="researcher-risk6">
+                <p class="label">Industry funded research with conditions of not disclosing risks to patients</p>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk6" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="researcher-risk6" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk6" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="researcher-risk7">
+                <p class="label">Research findings having the potential to expose big industry/ mafia trends</p>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk7" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="researcher-risk7" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="researcher-risk7" value="na" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <div class="form-group" id="consideration-confidentiality-level">
+            <p class="label">What level of confidentiality is provided to maintain privacy of patient information?</p>
+            <label class="input-option">
+            <input type="radio" name="confidentiality-level" value="1" checked/>
+            <span class="custom-radio"></span>
+            Anonymous data collection (no patients IDs collected); highest level of confidentiality
+            </label>
+            <label class="input-option">
+            <input type="radio" name="confidentiality-level" value="2" />
+            <span class="custom-radio"></span>
+            Anonymized data (removing direct identifiers after data collection irreversibly) without keeping a list of codes
+            </label>
+            <label class="input-option">
+            <input type="radio" name="confidentiality-level" value="3" />
+            <span class="custom-radio"></span>
+            Coding (converting patient IDs into codes after data collection) in data entry
+            </label>
+            <label class="input-option">
+            <input type="radio" name="confidentiality-level" value="4" />
+            <span class="custom-radio"></span>
+            Indirectly identifying information (date of birth, place of residence) but ensuring not to combine indirect identifiers to identify someone later
+            </label>
+            <label class="input-option">
+            <input type="radio" name="confidentiality-level" value="5" />
+            <span class="custom-radio"></span>
+            Collecting directly identifying information (name, NIC, registration number, or hospital IDs, for studies that may be requiring follow up for futyher inquiry sometimes) but without including personal data in analysis and publishing
+            </label>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <div class="form-group" id="consideration-data-security">
+            <p class="label">What steps will you take to ensure security of data?</p>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="1" checked/>
+            <span class="custom-radio"></span>
+            Secure passwords
+            </label>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="2" />
+            <span class="custom-radio"></span>
+            Password protected computers
+            </label>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="3" />
+            <span class="custom-radio"></span>
+            Password protected files
+            </label>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="4" />
+            <span class="custom-radio"></span>
+            Data encryption
+            </label>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="5" />
+            <span class="custom-radio"></span>
+            Auromatic log off computers
+            </label>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="6" />
+            <span class="custom-radio"></span>
+            None
+            </label>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <div class="form-group" id="consideration-data-security">
+            <p class="label">A missing question here?</p>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="yes" checked/>
+            <span class="custom-radio"></span>
+            Yes
+            </label>
+            <label class="input-option">
+            <input type="radio" name="data-security" value="no" />
+            <span class="custom-radio"></span>
+            No
+            </label>
+        </div>
+    </div>
+
+    
+    <div class="set">
+        <p class="label">Is there any risk to the institution/ target community group, or socuiety, hosting the data collection such as repute risk, stigmas, or any harm to the values or norms important to them?</p>
+        <!-- Add matrix logic here (7 questions with 3 choices each, to choose a single option from - input type radio) -->
+        <div class="input-matrix" id="consideration-risk-institution" data-options="3">
+            <div class="form-group header-row">
+                <p class="label"></p> <!-- empty cell to align with label column -->
+                <div class="input-option">Yes</div>
+                <div class="input-option">No</div>
+                <div class="input-option">Not Sure</div>
+            </div>
+            <div class="form-group" id="risk-institution-1">
+                <p class="label">Risk to the institution such as repute risks in culturally or religiously sensitive research/ risk of backlash in research exposing industry or politically controversial topics/ loss of credibility with report of negative performance in institutional research.</p>
+                <label class="input-option">
+                    <input type="radio" name="risk-institution-1" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk-institution-1" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk-institution-1" value="not-sure" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk-institution-2">
+                <p class="label">Risk to the target community such as emotional or social impact in culturally/ religiously/ politically sensitive research/ or marginalization risk with screening of diseases associated with stigmas.</p>
+                <label class="input-option">
+                    <input type="radio" name="risk-institution-2" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk-institution-2" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk-institution-2" value="not-sure" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="risk-institution-3">
+                <p class="label">Risk to society at macro level with harm to societal/ religious/ cultural/ professionals norms and values in researches designed without culturally sensitivity awareness.</p>
+                <label class="input-option">
+                    <input type="radio" name="risk-institution-3" value="yes" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="risk-institution-3" value="no" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="risk-institution-3" value="not-sure" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+        </div>
+        <div>
+            <label for="risk-institution-detail" class="label">If yes, share the details of what risks:</label>
+            <textarea id="risk-institution-detail" name="risk-institution-detail" class="input" rows="5"></textarea>
+        </div>
+        <!-- input with no poitner events to reflect number of risks with "Yes" -->
+        <div>
+            <label for="num_risks_score" class="label">ERC Risk Score Total</label>
+            <input type="text" name="num_risks_score" id="num_risks_score" class="input" value="0" disabled/>
+        </div>
+    </div>
+
+
+    <div class="set">
+        <p class="label">What are the benefits to be conveyed to the participants?</p>
+        <!-- Add matrix logic here (3 questions with 4 choices each, to choose a single option from - input type radio) -->
+        <div class="input-matrix" id="consideration-benefit" data-options="4">
+            <div class="form-group header-row">
+                <p class="label"></p> <!-- empty cell to align with label column -->
+                <div class="input-option">Minor gains (current practices)</div>
+                <div class="input-option">Moderate gains (mildly different practices)</div>
+                <div class="input-option">Major gains (changing practices)</div>
+                <div class="input-option">N/A</div>
+            </div>
+            <div class="form-group" id="benefit-1">
+                <p class="label">New knowledge gained and scientific development</p>
+                <label class="input-option">
+                    <input type="radio" name="benefit-1" value="minor" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="benefit-1" value="moderate" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="benefit-1" value="major" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="benefit-1" value="n/a" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="benefit-2">
+                <p class="label">Trainings/ educational interventions for participants</p>
+                <label class="input-option">
+                    <input type="radio" name="benefit-2" value="minor" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="benefit-2" value="moderate" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="benefit-2" value="major" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="benefit-3" value="n/a" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+
+            <div class="form-group" id="benefit-3">
+                <p class="label">Early disease diagnosis/ screening of disease that helps patient in getting timely treatment. FOr such benefit research should include step pf informing patients of their diagnosis after data collection.</p>
+                <label class="input-option">
+                    <input type="radio" name="benefit-3" value="minor" />
+                    <span class="custom-radio"></span>
+                </label>
+                    <label class="input-option">
+                    <input type="radio" name="benefit-3" value="moderate" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="benefit-3" value="major" />
+                    <span class="custom-radio"></span>
+                </label>
+                <label class="input-option">
+                    <input type="radio" name="benefit-3" value="n/a" />
+                    <span class="custom-radio"></span>
+                </label>
+            </div>
+        </div>
+        <!-- input with no poitner events to reflect number of benefits -->
+        <div>
+            <label for="num_benefit_score" class="label">Benefit Score Total</label>
+            <input type="text" name="num_benefit_score" id="num_benefit_score" class="input" value="0" disabled/>
+        </div>
+    </div>
+
+  </fieldset>
+</section>
+
+<section>
+  <!-- Section: Undertaking (placeholder for matrix logic) -->
+  <fieldset class="fieldset" id="undertaking">
+    <legend class="legend">Undertaking</legend>
+    <div class="set" id="undertaking-approval">
+        <p class="label">Will the project require approval by any other ethics committees other than the BMY Ethics Committee? (e.g. if you are collecting onsite data from a tertiary care hospital having their own IRB, then their approval is also needed, or requirement by National Bioethics Committee for reasearch spanning all provinces)</p>
+        <label class="input-option">
+            <input type="radio" name="undertaking-approval" value="yes" />
+            <span class="custom-radio"></span>
+            Yes
+        </label>
+        <label class="input-option">
+            <input type="radio" name="undertaking-approval" value="no" />
+            <span class="custom-radio"></span>
+            No
+        </label>
+    </div>
+    <div class="set" id="undertaking-where">
+        <p class="label">From where additional IRB approval is required?</p>
+        <!-- Input text filed for IRB information -->
+        <input type="text" name="undertaking-where" id="undertaking-where" class="input" />
+    </div>
+    <div class="set" id="undertaking-training">
+        <p class="label">Have the research team and data collector got the relevant training? This includes guiding them to ensure respect of humans during data collection, selecting suitable timing and appropriate ways of data collection according to target population and community norms, esp. for collecting sensitive information (involving stigma/ shame)</p>
+        <label class="input-option">
+            <input type="radio" name="undertaking-training" value="yes" />
+            <span class="custom-radio"></span>
+            Yes
+        </label>
+        <label class="input-option">
+            <input type="radio" name="undertaking-training" value="no" />
+            <span class="custom-radio"></span>
+            No
+        </label>
+    </div>
+    <div class="set" id="undertaking-interests">
+        <p class="label">Are there any finacial or other interests to the researcher(s) or department arising from this study, known to you?</p>
+        <label class="input-option">
+            <input type="radio" name="undertaking-interests" value="yes" />
+            <span class="custom-radio"></span>
+            Yes
+        </label>
+        <label class="input-option">
+            <input type="radio" name="undertaking-interests" value="no" />
+            <span class="custom-radio"></span>
+            No
+        </label>
+    </div>
+    <div class="set" id="undertaking-siganture">
+        <p class="label">I undertake to carry out this research in accordance with the BMY Health Pakistan ERC policy and will inform the committee of any changes to the protocol of this project, will submit proofs of genuine data collection, and will publish ethically.</p>
+        <!-- input type signature where user can draw their signature directly interactively from the UI -->
+        
+        <canvas id="signature-canvas" width="400" height="150" style="border: var(--border-min); border-radius: var(--radius-min);"></canvas>
+
+        <div class="signature-controls">
+            <button type="button" class="control" id="clear-signature">Clear</button>
+        </div>
+
+        <!-- Hidden input to store the saved signature data -->
+        <input type="hidden" name="undertaking-signature" id="undertaking-signature-input" />
+    </div>
+  </fieldset>
+</section>
+
+
+
+
+  <!-- Form Footer -->
+<div class="proposal-footer">
+    <div class="left">
+        <button type="button" id="back-proposal" class="secondary">Back</button>
+    </div>
+    <div class="right">
+        <button type="button" id="save-proposal" class="primary outline">Save</button>
+        <button type="button" id="next-proposal" class="primary">Next</button>
+        <button type="submit" id="submit-proposal" class="primary" style="display: none">Submit</button>
+    </div>
+</div>
+ 
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.5/dist/signature_pad.umd.min.js"></script>
+
+
+<script>
+function initProposal2() {
+  const canvas = document.getElementById('signature-canvas');
+  const signaturePad = new SignaturePad(canvas);
+  const hiddenInput = document.getElementById('undertaking-signature-input');
+
+  document.getElementById('clear-signature').addEventListener('click', () => {
+    signaturePad.clear();
+    hiddenInput.value = '';
+  });
+
+  function storeSignatureIfPresent() {
+    if (!signaturePad.isEmpty()) {
+      const dataURL = signaturePad.toDataURL('image/png');
+      hiddenInput.value = dataURL;
+    } else {
+      hiddenInput.value = '';
+    }
+  }
+
+  document.getElementById('save-proposal').addEventListener('click', () => {
+    storeSignatureIfPresent();
+    console.log("Saving proposal with signature:", hiddenInput.value.substring(0, 30) + '...');
+  });
+
+  document.getElementById('submit-proposal').addEventListener('click', () => {
+    storeSignatureIfPresent();
+  });
+
+  // num_risks logic
+  const numRisksInput = document.getElementById('num_risks');
+  if (numRisksInput) {
+    numRisksInput.value = '0';
+    const riskMatrix = document.getElementById('consideration-risk-exposure');
+    const updateNumRisks = () => {
+      let numRisks = 0;
+      const formGroups = riskMatrix.querySelectorAll('.form-group');
+      formGroups.forEach(formGroup => {
+        const radios = formGroup.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+          if (radio.checked && radio.value === 'yes') {
+            const riskFactor = formGroup.getAttribute('data-risk-factor');
+            numRisks += parseInt(riskFactor || '0');
+          }
+        });
+      });
+      numRisksInput.value = numRisks;
+      const informedConsent = document.getElementById('informed-consent');
+      if (informedConsent)
+        informedConsent.style.display = numRisks > 0 ? 'block' : 'none';
+    };
+
+    updateNumRisks();
+
+    const formGroups = riskMatrix.querySelectorAll('.form-group');
+    formGroups.forEach(group => {
+      group.addEventListener('change', updateNumRisks);
+    });
+  }
+}
+</script>

@@ -1,0 +1,123 @@
+<form class="proposal">
+    <!--Form Title-->
+    <div class="wrapper">
+        <h4>Proposal Form Exempt</h4>
+    </div>
+
+    <!-- Section 1: Proposal Overview -->
+    <fieldset class="fieldset">
+        <legend class="legend">Section 1: Proposal Overview</legend>
+
+        <label for="proposal-title" class="label">Proposal Title:</label>
+        <input type="text" id="proposal-title" name="proposal-title" class="input" required>
+    
+        <label for="proposal-summary" class="label">Proposal Summary:</label>
+        <textarea id="proposal-summary" name="proposal-summary" class="input" rows="5" required></textarea>
+
+        <!-- Date picker -->
+        <label for="proposal-date" class="label">Proposal Date:</label>
+        <input type="date" id="proposal-date" name="proposal-date" class="input" required>
+
+    </fieldset>
+
+    <!-- Section 2: Research Questions -->
+        <fieldset class="fieldset">
+        <legend class="legend">Section 2: Research Questions</legend>
+
+        <label for="research-question-1" class="label">Research Question 1:</label>
+        <textarea id="research-question-1" name="research-question-1" class="input" rows="5" required></textarea>
+    
+        <label for="research-question-2" class="label">Research Question 2:</label>
+        <textarea id="research-question-2" name="research-question-2" class="input" rows="5"></textarea>
+        </fieldset>
+
+    <!-- Section 3: Dropdowns -->
+        <fieldset class="fieldset">
+        <legend class="legend">Section 3: Methodology</legend>
+        <div class="select">
+            <label for="methodology" class="label">Methodology:</label>
+            <select id="methodology" name="methodology" class="select">
+                <button class="select">
+                    <selectedcontent></selectedcontent>
+                </button>
+                <option value="">Select Methodology</option>
+                <option value="qualitative">
+                    <p class="icon">🐱</p>
+                    <p class="option-label">Qualitative</p>
+                </option>
+                <option value="quantitative">
+                    <p class="icon">📊</p>
+                    <p class="option-label">Quantitative</p>
+                </option>
+                <option value="mixed-methods">
+                    <p class="icon">📊</p>
+                    <p class="option-label">Mixed-Methods</p>
+                </option>
+            </select>
+        </div>
+        </fieldset>
+
+    <!-- Section 4: Multiple Choice (Radio) -->
+    <fieldset class="fieldset">
+    <legend class="legend">Section 4: Multiple Choice Questions</legend>
+    <div class="form-group">
+        <p class="label">What is the primary goal of your research?</p>
+        <label class="input-option">
+        <input type="radio" name="goal" value="explore" />
+        <span class="custom-radio"></span>
+        To explore a new research area
+        </label>
+        <label class="input-option">
+        <input type="radio" name="goal" value="test" />
+        <span class="custom-radio"></span>
+        To test a hypothesis
+        </label>
+        <label class="input-option">
+        <input type="radio" name="goal" value="evaluate" />
+        <span class="custom-radio"></span>
+        To evaluate a program or policy
+        </label>
+    </div>
+    </fieldset>
+
+    <!-- Section 5: Checkboxes -->
+    <fieldset class="fieldset">
+    <legend class="legend">Section 5: Resources</legend>
+    <div class="form-group">
+        <p class="label">Which of the following resources will you need?</p>
+        <label class="input-option">
+        <input type="checkbox" name="resource" value="database" />
+        <span class="custom-checkbox"></span>
+        Access to a database
+        </label>
+        <label class="input-option">
+        <input type="checkbox" name="resource" value="lab" />
+        <span class="custom-checkbox"></span>
+        Use of a laboratory
+        </label>
+        <label class="input-option">
+        <input type="checkbox" name="resource" value="partner" />
+        <span class="custom-checkbox"></span>
+        Collaboration with a research partner
+        </label>
+    </div>
+    </fieldset>
+
+    <!-- Section 6: Long Answer -->
+    <fieldset class="fieldset">
+    <legend class="legend">Section 6: Methodology</legend>
+    <label for="long-answer" class="label">Describe your research methodology:</label>
+    <textarea id="long-answer" name="methodology" class="textarea" rows="8" required></textarea>
+    </fieldset>
+
+    <!-- Section 7: File Upload -->
+    <fieldset class="fieldset">
+        <legend class="legend">Section 7: File Upload</legend>
+        <label for="file-upload" class="label custom-file-upload">Upload Files</label>
+        <input type="file" id="file-upload" name="file-upload" class="input">
+    </fieldset>
+
+    <!-- Section 8: Submit and Cancel Buttons -->
+    <button type="submit" class="gradient">Submit</button>
+    <button type="button" class="primary outline">Cancel</button>
+</form>

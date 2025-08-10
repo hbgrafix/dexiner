@@ -1,0 +1,53 @@
+<section class="profile" id="profileComponent">
+  <h3>Profile</h3>
+  <form id="profile-form" class="form user-form" style="min-width: 300px;">
+    <fieldset class="fieldset">
+      <legend class="legend">Preferences</legend>
+
+      <!-- Role Selector -->
+      <div class="select">
+        <label for="role" class="label">Role:</label>
+        <select id="role" name="role" class="select">
+          <option value="" style="display: none">Select Role</option>
+          <option value="admin">Admin</option>
+          <option value="default">Default</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+
+      <!-- Theme Selector -->
+      <div class="select">
+        <label for="theme" class="label">Theme:</label>
+        <select id="theme" name="theme" class="select">
+          <option value="" style="display: none">Select Theme</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <button type="submit">Save Profile</button>
+  </form>
+
+  <div id="profile-status" role="status"></div>
+</section>
+
+<script>
+  // Populate selects with current values
+  (function initProfileForm() {
+    const role = document.body.getAttribute('data-role') || 'guest';
+    const theme = document.body.getAttribute('data-theme') || 'light';
+    const roleSelect = document.getElementById('role');
+    const themeSelect = document.getElementById('theme');
+
+    if (roleSelect) {
+      const rMatch = [...roleSelect.options].find(opt => opt.value === role);
+      if (rMatch) rMatch.selected = true;
+    }
+    if (themeSelect) {
+      const tMatch = [...themeSelect.options].find(opt => opt.value === theme);
+      if (tMatch) tMatch.selected = true;
+    }
+  })();
+
+</script>
