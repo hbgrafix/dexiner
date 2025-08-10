@@ -37,7 +37,7 @@ function resolvePath(type, name) {
 
 // Fetch component template
 async function fetchHTML(path) {
-  const res = await fetch(`/templates/${path}.html`);
+  const res = await fetch(`./templates/${path}.html`);
   if (!res.ok) throw new Error(`Failed to load template: ${path}`);
   return await res.text();
 }
@@ -54,4 +54,5 @@ export {
 };
 
 export default renderLayout;
+
 
