@@ -23,7 +23,7 @@ export async function initApp(role = 'admin') {
     State.set('config', config);
     log.success('Config loaded from config.json' + (State.get('debug') ? `: ${JSON.stringify(config)}` : ''));
   } catch (err) {
-    //log.warn('No config.json found, using defaults');
+    log.warn('No config.json found, using defaults');
     State.set('config', {}); // fallback empty config
   }
 
@@ -49,3 +49,4 @@ export async function initApp(role = 'admin') {
   ui.init(role);
   log.success(`App initialized for role: ${role}, route: ${State.get('route')}`);
 }
+
