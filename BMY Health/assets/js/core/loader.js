@@ -5,7 +5,7 @@ const loadedComponents = new Map();
 const templateCache = new Map(); // Cache: cleaned HTML + extracted scripts/styles
 
 async function fetchHTML(path) {
-  const res = await fetch(`/templates/${path}.html`);
+  const res = await fetch(`./templates/${path}.html`);
   if (!res.ok) throw new Error(`Failed to load: ${path}`);
   return res.text(); // ⚠️ Just return raw text
 }
@@ -15,7 +15,7 @@ const inflight = new Map();
 
 async function fetchHTMLDedup(path) {
   if (inflight.has(path)) return inflight.get(path);
-  const p = fetch(`/templates/${path}.html`)
+  const p = fetch(`./templates/${path}.html`)
     .then(res => {
       if (!res.ok) throw new Error('Failed');
       return res.text();
@@ -232,3 +232,4 @@ export {
   clearAllComponents,
   watchRoleComponentMap,
 };
+
